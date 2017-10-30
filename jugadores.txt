@@ -1,0 +1,296 @@
+NIVEL 1:
+
+Cristiano Ronaldo
+Luis Suarez
+Sergio Aguero
+Arjen Robben
+Mesut Ozil
+Marcelo
+Lionel Messi
+Andrea Pirlo
+Antoine Griezmann
+Cesc Fabregas
+Mario Balotelli
+Dani Alves
+Falcao
+Ousmane Dembele
+Francesco Totti
+Gianluigi Buffon
+James Rodriguez
+Karim Benzema
+Alexis Sanchez
+Zlatan Ibrahimovic
+Toni Kroos
+Paulo Dybala
+Wayne Rooney
+Robin van Persie
+Neymar
+Robert Lewandowski
+Edinson Cavani
+Iker Casillas
+Kylian Mbappe
+Paul Pogba
+
+NIVEL 2:
+
+Keylor Navas
+Philippe Coutinho
+Marek Hamsik
+Oscar
+Mario Mandzukic
+Theo Walcott
+Olivier Giroud
+Fernando Llorente
+Mauro Icardi
+Angel Di Maria
+Santi Cazorla
+Paulinho
+Franck Ribery
+Gerard Pique
+Gareth Bale
+Fernando Torres
+Joe Hart
+Marco Reus
+Robinho
+Riyad Mahrez
+Filipe Luis
+Alvaro Morata
+Carlos Tevez
+Pierre Emerick Aubameyang
+Thomas Muller
+Ivan Rakitic
+Gonzalo Higuain
+Yaya Toure
+Claudio Bravo
+Alex Oxlade Chamberlain
+
+NIVEL 3:
+
+Kevin Prince Boateng
+Jerome Boateng
+Marouane Fellaini
+Mikel Arteta
+Marquinhos
+Juan Mata
+Nani
+Pedro
+Javier Mascherano
+Per Mertesacker
+Jordi Alba
+Pablo Zabaleta
+Jesus Navas
+Kevin Mirallas
+Klaas Jan Huntelaar
+Petr Cech
+Alexandre Pato
+Kolo Toure
+Javi Martinez
+Pepe Reina
+Michael Bradley
+Javier Pastore
+Chicharito Hernandez
+Memo Ochoa
+Paolo Guerrero
+Memphis Depay
+Thiago Silva
+Gary Medel
+Gervinho
+Arda Turan
+
+NIVEL 4:
+
+Luka Modric
+Ashley Young
+Lukas Podolski
+Marco Verratti
+Ander Herrera
+Sebastian Giovinco
+Gylfi Sigurdsson
+Andy Carroll
+Julian Draxler
+Nemanja Vidic
+Andre Ayew
+Mario Gomez
+Andre Gomes
+David Villa
+Enner Valencia
+Kevin Gameiro
+David de Gea
+Maya Yoshida
+Alvaro Negredo
+Salomon Rondon
+Luke Shaw
+Paco Alcacer
+Alessio Cerci
+Hector Bellerin
+Alex Song
+Lucas Silva
+Andre Schurrle
+Philippe Mexes
+Mathieu Valbuena
+Jonathan dos Santos
+
+NIVEL 5:
+
+David Ospina
+Wesley Sneijder
+Santiago Arias
+Jermain Defoe
+Peter Crouch
+Maicon
+Wilfried Bony
+Simon Mignolet
+Miralem Pjanic
+Jack Wilshere
+Casemiro
+Giorgio Chiellini
+Victor Moses
+Juan Cuadrado
+Mauricio Pinilla
+Andrei Arshavin
+Andre-Pierre Gignac
+Jackson Martinez
+Danny Welbeck
+Georgios Samaras
+Gerard Deulofeu
+Willy Caballero
+Shinji Kagawa
+Fabian Delph
+Adam Lallana
+David Silva
+Hulk
+Juan Vargas
+Salomon Kalou
+Ramires
+
+NIVEL 6:
+
+Sofiane Feghouli
+Luis Muriel
+Tim Cahill
+Martin Skertel
+Mathieu Debuchy
+Stefano Okaka
+Hector Moreno
+Samir Handanovic
+Bastian Schweinsteiger
+Oriol Romeu
+Steven Pienaar
+Axel Witsel
+Stevan Jovetic
+Bafetimbi Gomis
+Marco Fabian
+Kevin Trapp
+Kiko Casilla
+Marko Arnautovic
+James Milner
+Jay Rodriguez
+Jefferson Farfan
+Jefferson Montero
+Sulley Muntari
+Saphir Taider
+Xerdan Shaquiri
+Andres Guardado
+Luiz Adriano
+Mauricio Isla
+Jamie Vardy
+Jasper Cillessen
+
+NIVEL 7:
+
+Bryan Ruiz
+Lord Bendtner
+Eden Hazard
+Yuto Nagatomo
+Carlos Bacca
+Diego Alves
+Ezequiel Lavezzi
+Iago Aspas
+Shinji Okazaki
+Carlos Vela
+Cesar Azpilicueta
+Charlie Austin
+Diego Lopez
+Eduardo Vargas
+Phil Jagielka
+Islam Slimani 
+Luis Fabiano
+Diego Costa
+Dani Parejo
+Ciro Immobile
+Dimitri Payet
+Morgan Schneiderlin
+Claudio Pizarro
+Miralem Sulejmani
+Jorge Valdivia
+Konstantinos Mitroglou
+Granit Xhaka
+Graziano Pelle
+Maxi Lopez
+Henrikh Mkhitaryan
+
+NIVEL 8:
+
+Luis Advincula
+Edwin Cardona
+Vincent Enyeama
+Nolito
+Emre Can
+Nico Gaitan
+Nemanja Matic
+Cristian Tello
+Dejan Lovren
+Franco di Santo
+Lucas Biglia
+Ezequiel Garay
+Fernandinho
+Erik Lamela
+Anthony Martial
+Carlos Sanchez
+Ferreira Carrasco
+Ever Banega
+Firmino
+Gael Clichy
+Juanfran
+Ederson
+Kasper Schmeichel
+Antonio Valencia
+Dario Benedetto
+Miku Fedor
+Arturo Vidal
+Gabriel Jesus
+Xabi Prieto
+Felipe Caicedo
+
+NIVEL 9:
+
+Alfredo di Stefano
+Bobby Moore
+Carlos Valderrama
+Diego Armando Maradona
+Dino Zoff
+Eric Cantona
+Eusebio
+Ferenc Puskas
+Franz Beckenbauer
+Gabriel Batistuta
+George Best
+Gerhard Muller
+Hugo Sanchez
+Ivan Zamorano
+Johan Cruyff
+Jurgen Klinsmann
+Just Fontaine
+Lev Yashin
+Luis Figo
+Marco van Basten
+Mario Kempes
+Paolo Maldini
+Patrick Kluivert
+Pele
+Roberto Baggio
+Roberto Carlos
+Ronaldo
+Ruud Gullit
+Teofilo Cubillas
+Zinedine Zidane
