@@ -5,6 +5,7 @@
  */
 package adivina.el.futbolista;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -17,6 +18,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.Timer;;
 
@@ -26,6 +29,11 @@ import javax.swing.Timer;;
  */
 public class Tablero extends JPanel implements ActionListener, MouseListener{
     private Timer timer ;
+    private JFrame frame;
+
+    public void setFrame(JFrame frame) {
+        this.frame = frame;
+    }
     
     public Tablero(){
         //Lanza un evento de tipo ActionListener cada 100 Milisegundos
@@ -41,10 +49,21 @@ public class Tablero extends JPanel implements ActionListener, MouseListener{
     @Override
     public void mouseClicked(MouseEvent e) {
         Point mp = e.getPoint();
-        Rectangle cuadrado = new Rectangle (40, 40, 55, 44);
-        if (cuadrado.contains(mp)){
-            
+        Rectangle c1 = new Rectangle (50, 30, 200, 50);
+        Rectangle c2 = new Rectangle (50, 380, 200, 50);
+        Rectangle c3 = new Rectangle (308, 380, 200, 50);
+        Rectangle c4 = new Rectangle (564, 380, 200, 50);
+        if (c1.contains(mp)){
             System.out.println("SALIENDO");
+        }
+        if (c2.contains(mp)){
+            System.out.println("MODO 1 JUGADOR");
+        }
+        if (c3.contains(mp)){
+            System.out.println("MODO MULTIJUGADOR");
+        }
+        if (c4.contains(mp)){
+            System.out.println("COMPRA MONEDAS");
         }
     }
 
@@ -106,23 +125,23 @@ public class Tablero extends JPanel implements ActionListener, MouseListener{
        g.drawImage(fondo, 0, 0, this);
        Image tituloPrincipal = loadImage("AdivinaElFutbolista.png");
        g.drawImage(tituloPrincipal, 50, 120, this);
-       g.setColor(Color.black);
-       g.fillRect(40, 40, 55, 44);
+       Image botonPrueba = loadImage("BotonBase.png");
+       g.drawImage(botonPrueba, 50, 30, this);
+       g.drawImage(botonPrueba, 50, 380, this);
+       g.drawImage(botonPrueba, 308, 380, this);
+       g.drawImage(botonPrueba, 564, 380, this);
        g.setColor(Color.white);
-       g.drawString("SALIR", 50, 50);
-       g.drawString("1 JUGADOR", 50, 400);
-       g.drawString("MULTIJUGADOR", 330, 400);
-       g.drawString("COMPRAR MONEDAS", 630, 400);
+       g.drawString("SALIR", 130, 60);
+       g.drawString("1 JUGADOR", 115, 410);
+       g.drawString("MULTIJUGADOR", 360, 410);
+       g.drawString("COMPRAR MONEDAS", 605, 410);
        g.setColor(Color.yellow);
-       g.drawString("XX MONEDAS", 670, 50);
-      
-
+       g.drawString("XX MONEDAS", 678, 45);
     }
 
     //Metodo que se ejecuta cada vez que se lanza un ActionListener
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("Repaint");
         repaint();
     }
     

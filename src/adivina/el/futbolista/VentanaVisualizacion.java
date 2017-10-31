@@ -17,7 +17,9 @@ public class VentanaVisualizacion extends JFrame{
     }
 
     private void initUI() {
-        add(new Tablero());
+        Tablero tablero = new Tablero();
+        tablero.setFrame(this);
+        add(tablero);
         setSize(816, 539);
         setTitle("ADIVINA EL FUTBOLISTA");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

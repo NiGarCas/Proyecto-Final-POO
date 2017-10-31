@@ -14,5 +14,26 @@ import java.awt.Image;
 public class Equipo {
     private String nombre;
     private Image camiseta;
+
+    public Equipo(String nombre, Image camiseta) {
+        this.nombre = nombre;
+        this.camiseta = camiseta;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Image getCamiseta() {
+        return camiseta;
+    }
+
+    public void setCamiseta(Image camiseta) {
+        this.camiseta = camiseta;
+    }
     
 }
