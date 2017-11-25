@@ -5,10 +5,22 @@
  */
 package logica;
 
+import datos.DosJugadores;
+import datos.Juego;
+import datos.UnJugador;
+import visualizacion.Ventana;
+
 /**
  *
  * @author nicol
  */
 public class LogicaAEF {
-    
+    public static void main(String[] args) {
+        UnJugador unJugador = new UnJugador(0);
+        DosJugadores dosJugadores = new DosJugadores();
+        Juego juego = new Juego(0,unJugador,dosJugadores);
+        Ventana ventana = new Ventana(juego);
+        ventana.setVisible(true);
+       
+    }
 }
