@@ -17,10 +17,12 @@ public class UnJugador {
     private Nivel nivelActual;
     private Jugador jugador_Actual;
     private int totalAdivinados;
+    private boolean juego_actual;
 
     public UnJugador(int totalAdivinados) {
         this.niveles = new ArrayList();
         this.totalAdivinados = totalAdivinados;
+        this.juego_actual = false;
     }
 
     public Juego getJuego() {
@@ -54,8 +56,47 @@ public class UnJugador {
     public void setTotalAdivinados(int totalAdivinados) {
         this.totalAdivinados = totalAdivinados;
     }
+
+    public void setJuego_actual(boolean juego_actual) {
+        this.juego_actual = juego_actual;
+    }
     
     public void agregarNivel(int numero, int jugadoresAdivinados, int necesariosParaDesbloquear){
         this.niveles.add(new Nivel(numero,jugadoresAdivinados,necesariosParaDesbloquear));
     }
+
+    public int determinarNivel(String textoBoton) {
+        char[] a = textoBoton.toCharArray();
+        switch (a[0]){
+            case 49:
+                return 1;
+            case 50:
+                return 2;
+            case 51:
+                return 3;
+            case 52:
+                return 4;
+            case 53:
+                return 5;
+            case 54:
+                return 6;
+            case 55:
+                return 7;
+            case 56:
+                return 8;
+            case 57:
+                return 9;
+            default:
+                return 0;
+        }
+    }
+
+    public void anteriorJugador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void siguienteJugador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }

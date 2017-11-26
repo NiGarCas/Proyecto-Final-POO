@@ -28,6 +28,8 @@ public abstract class Panel extends JPanel implements ActionListener{
 
     public Panel(Ventana Ventana) {
         this.Ventana = Ventana;
+        this.setSize(800, 500);
+        this.setFocusable(true);
         this.font =  new Font("Poetsen One", 0, 16);
         this.verdeOscuro = new Color (17,94,44);
         this.verdeMedio = new Color (35,162,80);

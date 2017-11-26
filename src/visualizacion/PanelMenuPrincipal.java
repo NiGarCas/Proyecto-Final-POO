@@ -21,6 +21,7 @@ public class PanelMenuPrincipal extends Panel{
     
     public PanelMenuPrincipal(Ventana Ventana) {
         super(Ventana);
+        this.repaint();
     }
     
     @Override
@@ -43,10 +44,10 @@ public class PanelMenuPrincipal extends Panel{
                 this.getVentana().dispose();
                 break;
             case "UN JUGADOR":
-                
+                this.getVentana().actualizarPanel(1);
                 break;
             case "DOS JUGADORES":
-                
+                this.getVentana().actualizarPanel(2);
                 break;
             case "COMPRAR MONEDAS":
                 this.getVentana().getJuego().setMonedas(this.getVentana().getJuego().getMonedas() + 1);

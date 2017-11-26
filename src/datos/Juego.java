@@ -16,11 +16,13 @@ public class Juego {
     private UnJugador unJugador;
     private DosJugadores dosJugadores;
     private Ventana ventana;
+    private boolean pudoRestar;
 
     public Juego(int monedas, UnJugador unJugador, DosJugadores dosJugadores) {
         this.monedas = monedas;
         this.unJugador = unJugador;
         this.dosJugadores = dosJugadores;
+        this.pudoRestar = false;
     }
 
     public int getMonedas() {
@@ -39,12 +41,29 @@ public class Juego {
         return ventana;
     }
 
+    public boolean isPudoRestar() {
+        return pudoRestar;
+    }
+    
     public void setMonedas(int monedas) {
         this.monedas = monedas;
     }
 
     public void setVentana(Ventana ventana) {
         this.ventana = ventana;
+    }
+
+    public void setPudoRestar(boolean pudoRestar) {
+        this.pudoRestar = pudoRestar;
+    }
+    
+    public boolean restarMonedas(int i) {
+        if(i <= this.monedas){
+            this.monedas = this.monedas - i;
+            return true;
+        }else{
+            return false;
+        }
     }
     
 }

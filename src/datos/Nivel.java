@@ -60,5 +60,34 @@ public class Nivel {
     public void agregarJugador(boolean adivinado, String nombre, int intentos, String pais, String posicion){
         this.jugadores.add(new Jugador(adivinado,nombre,intentos,pais,posicion));
     }
+    public boolean isDesbloqueado(){
+        if(this.restantesParaDesbloquear < 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public int determinarJugador(String textoBoton) {
+        int a = 0;
+        for(int i = 0; i < this.getJugadores().size(); i++){
+            if(textoBoton.equals(this.getJugadores().get(i))){
+                 a = i+1;
+                 break;
+            }
+        }
+        return a;
+    }
+
+    public int getNumeroJugador(Jugador jugador) {
+        int a = 0;
+        for(int i = 0;i < this.getJugadores().size(); i++){
+            if(this.getJugadores().get(i).equals(jugador)){
+            a = i+1;
+            break;
+            }
+        }
+        return a;
+    }
 }
 

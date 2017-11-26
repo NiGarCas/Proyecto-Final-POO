@@ -22,6 +22,7 @@ public class Jugador {
     private Letra[] letrasRespuesta;
     private int intentos;
     
+    private int pista;
     private String pais;
     private String posicion;
     private char primeraLetra;
@@ -39,8 +40,7 @@ public class Jugador {
         this.pais = pais;
         this.posicion = posicion;
         this.primeraLetra = nombreEnChar[0];
-        int posicionUltimoEquipo = this.equipos.size() - 1;
-        this.ultimoEquipo = this.equipos.get(posicionUltimoEquipo).getNombre();
+        this.pista = 0;
     }
 
     public Nivel getNivel() {
@@ -71,6 +71,10 @@ public class Jugador {
         return intentos;
     }
 
+    public int getPista() {
+        return pista;
+    }
+    
     public String getPais() {
         return pais;
     }
@@ -102,8 +106,13 @@ public class Jugador {
     public void setIntentos(int intentos) {
         this.intentos = intentos;
     }
+
+    public void setPista(int pista) {
+        this.pista = pista;
+    }
     
     public void agregarEquipo(Equipo equipo){
         this.equipos.add(equipo);
+        this.ultimoEquipo = equipo.getNombre();
     }
 }

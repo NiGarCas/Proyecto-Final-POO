@@ -5,6 +5,8 @@
  */
 package visualizacion;
 
+import datos.Nivel;
+import datos.UnJugador;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -17,72 +19,116 @@ import javax.swing.JLabel;
  * @author nicol
  */
 public class PanelMenuNiveles extends Panel{
-
+    
+    private UnJugador unjugador;
     public PanelMenuNiveles(Ventana Ventana) {
         super(Ventana);
+        this.unjugador = this.getVentana().getJuego().getUnJugador();
     }
     
     @Override
     public void paintComponent(Graphics g) {
         this.setLayout(null);
-       super.paintComponent(g);
-       Image fondo = loadImage("Fondo.png");
-       g.drawImage(fondo, 0, 0, this);
-       this.agregarComponentes();
+        super.paintComponent(g);
+        Image fondo = loadImage("Fondo.png");
+        g.drawImage(fondo, 0, 0, this);
+        this.agregarComponentes();
     }
     
     @Override
     public void actionPerformed(ActionEvent evento) {
-        
+        JButton source = (JButton)evento.getSource();
+        String textoBoton = source.getText();
+        switch(textoBoton){
+            case "ATRÁS":
+                this.getVentana().actualizarPanel(0);
+                break;
+            default:
+                int nivel = this.unjugador.determinarNivel(textoBoton);
+                if(nivel != 0){
+                    this.getVentana().getJuego().getUnJugador().setNivelActual(this.getVentana().getJuego().getUnJugador().getNiveles().get(nivel-1));
+                    this.getVentana().actualizarPanel(2);
+                }
+                break;
+        }
     }
 
     @Override
     public void agregarComponentes() {
-       this.removeAll();
-       JLabel niveles = new JLabel("NIVELES");
-       niveles.setFont(this.getFont().deriveFont(0, 110));
-       niveles.setBounds(40, 15, 500, 110);
-       niveles.setLocation(40, 15);
-       niveles.setForeground(Color.WHITE);
-       this.add(niveles);
-       JLabel monedas = new JLabel("MONEDAS: " + this.getVentana().getJuego().getMonedas());
-       monedas.setFont(this.getFont().deriveFont(0,25));
-       monedas.setBounds(615, 15, 200, 50);
-       monedas.setLocation(615, 15);
-       monedas.setForeground(this.getDorado());
-       this.add(monedas);
-       JButton salir = new JButton("ATRÁS");
-       salir.setFont(this.getFont());
-       salir.setBounds(614, 80, 150, 35);
-       salir.setLocation(614, 80);
-       salir.setBackground(this.getVerdeOscuro());
-       salir.setForeground(Color.WHITE);
-       salir.addActionListener(this);
-       this.add(salir);
-       JButton unJugador = new JButton("UN JUGADOR");
-       unJugador.setFont(this.getFont());
-       unJugador.setBounds(50, 380, 200, 50);
-       unJugador.setLocation(50, 380);
-       unJugador.setBackground(this.getVerdeOscuro());
-       unJugador.setForeground(Color.WHITE);
-       unJugador.addActionListener(this);
-       this.add(unJugador);
-       JButton dosJugadores = new JButton("DOS JUGADORES");
-       dosJugadores.setFont(this.getFont());
-       dosJugadores.setBounds(308, 380, 200, 50);
-       dosJugadores.setLocation(308, 380);
-       dosJugadores.setBackground(this.getVerdeOscuro());
-       dosJugadores.setForeground(Color.WHITE);
-       dosJugadores.addActionListener(this);
-       this.add(dosJugadores);
-       JButton compraMonedas = new JButton("COMPRAR MONEDAS");
-       compraMonedas.setFont(this.getFont());
-       compraMonedas.setBounds(564, 380, 200, 50);
-       compraMonedas.setLocation(564, 380);
-       compraMonedas.setBackground(this.getVerdeOscuro());
-       compraMonedas.setForeground(Color.WHITE);
-       compraMonedas.addActionListener(this);
-       this.add(compraMonedas);
+        this.removeAll();
+        JLabel niveles = new JLabel("NIVELES");
+        niveles.setFont(this.getFont().deriveFont(0, 110));
+        niveles.setBounds(40, 15, 500, 110);
+        niveles.setLocation(40, 15);
+        niveles.setForeground(Color.WHITE);
+        this.add(niveles);
+        JLabel monedas = new JLabel("MONEDAS: " + this.getVentana().getJuego().getMonedas());
+        monedas.setFont(this.getFont().deriveFont(0,25));
+        monedas.setBounds(615, 15, 200, 50);
+        monedas.setLocation(615, 15);
+        monedas.setForeground(this.getDorado());
+        this.add(monedas);
+        JButton atras = new JButton("ATRÁS");
+        atras.setFont(this.getFont());
+        atras.setBounds(614, 80, 150, 35);
+        atras.setLocation(614, 80);
+        atras.setBackground(this.getVerdeOscuro());
+        atras.setForeground(Color.WHITE);
+        atras.addActionListener(this);
+        this.add(atras);
+        for (int i = 0; i<3;i++){
+            Nivel nivel = this.getVentana().getJuego().getUnJugador().getNiveles().get(i);
+            JButton bNivel;
+            if(nivel.isDesbloqueado()){
+                bNivel = new JButton(nivel.getNumero() + " - " + nivel.getJugadoresAdivinados() + "/30");
+                bNivel.setBackground(this.getVerdeMedio());
+                bNivel.setForeground(Color.WHITE);
+            }else{
+                bNivel = new JButton(nivel.getRestantesParaDesbloquear() + " jugadores restantes para desbloquear");
+                bNivel.setBackground(this.getVerdeOscuro());
+                bNivel.setForeground(this.getVerdeMedio());
+            }
+            bNivel.setFont(this.getFont());
+            bNivel.setBounds(50+(i*107), 200, 200, 80);
+            bNivel.setLocation(50+(i*107), 200);
+            bNivel.addActionListener(this);
+            this.add(bNivel);
+        }
+        for (int i = 3; i<6;i++){
+            Nivel nivel = this.getVentana().getJuego().getUnJugador().getNiveles().get(i);
+            JButton bNivel;
+            if(nivel.isDesbloqueado()){
+                bNivel = new JButton(nivel.getNumero() + " - " + nivel.getJugadoresAdivinados() + "/30");
+                bNivel.setBackground(this.getVerdeMedio());
+                bNivel.setForeground(Color.WHITE);
+            }else{
+                bNivel = new JButton(nivel.getRestantesParaDesbloquear() + " jugadores restantes para desbloquear");
+                bNivel.setBackground(this.getVerdeOscuro());
+                bNivel.setForeground(this.getVerdeMedio());
+            }
+            bNivel.setFont(this.getFont());
+            bNivel.setBounds(50+(i*107), 304, 200, 80);
+            bNivel.setLocation(50+(i*107), 304);
+            bNivel.addActionListener(this);
+            this.add(bNivel);
+        }
+        for (int i = 6; i<9;i++){
+            Nivel nivel = this.getVentana().getJuego().getUnJugador().getNiveles().get(i);
+            JButton bNivel;
+            if(nivel.isDesbloqueado()){
+                bNivel = new JButton(nivel.getNumero() + " - " + nivel.getJugadoresAdivinados() + "/30");
+                bNivel.setBackground(this.getVerdeMedio());
+                bNivel.setForeground(Color.WHITE);
+            }else{
+                bNivel = new JButton(nivel.getNumero() + " - " + nivel.getRestantesParaDesbloquear() + " jugadores restantes para desbloquear");
+                bNivel.setBackground(this.getVerdeOscuro());
+                bNivel.setForeground(this.getVerdeMedio());
+            }
+            bNivel.setFont(this.getFont());
+            bNivel.setBounds(50+(i*107), 408, 200, 80);
+            bNivel.setLocation(50+(i*107), 408);
+            bNivel.addActionListener(this);
+            this.add(bNivel);
+        }
     }
-    
 }

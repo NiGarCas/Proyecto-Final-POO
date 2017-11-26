@@ -8,6 +8,7 @@ package logica;
 import datos.DosJugadores;
 import datos.Juego;
 import datos.UnJugador;
+import java.awt.BorderLayout;
 import visualizacion.Ventana;
 
 /**
@@ -20,7 +21,7 @@ public class LogicaAEF {
         DosJugadores dosJugadores = new DosJugadores();
         Juego juego = new Juego(0,unJugador,dosJugadores);
         Ventana ventana = new Ventana(juego);
+//        ventana.add(ventana.getPanel_actual());
         ventana.setVisible(true);
-       
     }
 }
