@@ -32,7 +32,7 @@ public class PanelMenuPrincipal extends Panel{
        g.drawImage(fondo, 0, 0, this);
        Image tituloPrincipal = loadImage("AdivinaElFutbolista.png");
        g.drawImage(tituloPrincipal, 50, 120, this);
-       this.agregarComponentes();
+       this.agregarComponentes(g);
     }
     
     @Override
@@ -57,7 +57,7 @@ public class PanelMenuPrincipal extends Panel{
     }
 
     @Override
-    public void agregarComponentes() {
+    public void agregarComponentes(Graphics g) {
        this.removeAll();
        JButton salir = new JButton("SALIR");
        salir.setFont(this.getFont());

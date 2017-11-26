@@ -35,7 +35,7 @@ public class PanelPista extends Panel{
         super.paintComponent(g);
         Image fondo = loadImage("Fondo.png");
         g.drawImage(fondo, 0, 0, this);
-        this.agregarComponentes();
+        this.agregarComponentes(g);
         if(this.advertencia){
         Image adv = loadImage("Advertencia.png");
         g.drawImage(adv, 107, 320, this);
@@ -53,7 +53,7 @@ public class PanelPista extends Panel{
     }
 
     @Override
-    public void agregarComponentes() {
+    public void agregarComponentes(Graphics g) {
         this.removeAll();
         JLabel niveles = new JLabel("PISTAS");
         niveles.setFont(this.getFont().deriveFont(0, 110));

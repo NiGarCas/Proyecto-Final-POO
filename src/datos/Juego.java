@@ -5,6 +5,7 @@
  */
 package datos;
 
+import java.util.ArrayList;
 import visualizacion.Ventana;
 
 /**
@@ -12,17 +13,24 @@ import visualizacion.Ventana;
  * @author nicol
  */
 public class Juego {
+    private String nombre;
     private int monedas;
     private UnJugador unJugador;
     private DosJugadores dosJugadores;
     private Ventana ventana;
     private boolean pudoRestar;
+    private ArrayList<Equipo> equipos;
 
-    public Juego(int monedas, UnJugador unJugador, DosJugadores dosJugadores) {
+    public Juego(String nombre,int monedas, UnJugador unJugador, DosJugadores dosJugadores) {
         this.monedas = monedas;
         this.unJugador = unJugador;
         this.dosJugadores = dosJugadores;
         this.pudoRestar = false;
+        this.equipos = new ArrayList();
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     public int getMonedas() {
@@ -44,6 +52,14 @@ public class Juego {
     public boolean isPudoRestar() {
         return pudoRestar;
     }
+
+    public ArrayList<Equipo> getEquipos() {
+        return equipos;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
     
     public void setMonedas(int monedas) {
         this.monedas = monedas;
@@ -64,6 +80,17 @@ public class Juego {
         }else{
             return false;
         }
+    }
+
+    public Equipo determinarEquipo(String equipo) {
+        Equipo e = null;
+        for(Equipo eq : this.equipos){
+            if(eq.getNombre().equals(equipo)){
+                e = eq;
+                break;
+            }
+        }
+        return e;
     }
     
 }

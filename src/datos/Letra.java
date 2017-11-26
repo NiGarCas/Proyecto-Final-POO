@@ -29,5 +29,9 @@ public class Letra {
     public void setEscogida(boolean escogida) {
         this.escogida = escogida;
     }
+
+    public void setLetra(char letra) {
+        this.letra = letra;
+    }
     
 }

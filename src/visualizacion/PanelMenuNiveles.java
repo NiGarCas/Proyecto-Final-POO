@@ -32,7 +32,7 @@ public class PanelMenuNiveles extends Panel{
         super.paintComponent(g);
         Image fondo = loadImage("Fondo.png");
         g.drawImage(fondo, 0, 0, this);
-        this.agregarComponentes();
+        this.agregarComponentes(g);
     }
     
     @Override
@@ -54,7 +54,7 @@ public class PanelMenuNiveles extends Panel{
     }
 
     @Override
-    public void agregarComponentes() {
+    public void agregarComponentes(Graphics g) {
         this.removeAll();
         JLabel niveles = new JLabel("NIVELES");
         niveles.setFont(this.getFont().deriveFont(0, 110));

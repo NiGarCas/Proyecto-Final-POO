@@ -19,7 +19,7 @@ public class Jugador {
     private String nombre;
     private ArrayList<Equipo> equipos;
     private Letra[] letrasDisponibles;
-    private Letra[] letrasRespuesta;
+    private ArrayList<Letra> letrasRespuesta;
     private int intentos;
     
     private int pista;
@@ -34,7 +34,7 @@ public class Jugador {
         char[] nombreEnChar = this.nombre.toCharArray();
         this.equipos = new ArrayList();
         this.letrasDisponibles = new Letra[15];
-        this.letrasRespuesta = new Letra[nombreEnChar.length];
+        this.letrasRespuesta = new ArrayList();
 //        this.crearLetrasDisponibles();
         this.intentos = intentos;
         this.pais = pais;
@@ -63,7 +63,7 @@ public class Jugador {
         return letrasDisponibles;
     }
 
-    public Letra[] getLetrasRespuesta() {
+    public ArrayList<Letra> getLetrasRespuesta() {
         return letrasRespuesta;
     }
 
@@ -99,7 +99,7 @@ public class Jugador {
         this.letrasDisponibles = letrasDisponibles;
     }
 
-    public void setLetrasRespuesta(Letra[] letrasRespuesta) {
+    public void setLetrasRespuesta(ArrayList<Letra> letrasRespuesta) {
         this.letrasRespuesta = letrasRespuesta;
     }
 

@@ -7,6 +7,7 @@ package visualizacion;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -71,5 +72,5 @@ public abstract class Panel extends JPanel implements ActionListener{
     @Override
     public abstract void actionPerformed(ActionEvent evento);
     
-    public abstract void agregarComponentes();
+    public abstract void agregarComponentes(Graphics g);
 }

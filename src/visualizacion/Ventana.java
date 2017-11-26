@@ -37,7 +37,7 @@ public class Ventana extends JFrame{
         this.paneles[4] = new PanelPistas(this);
         this.paneles[5] = new PanelPista(this);
         this.panel_actual = new JPanel();
-        this.add(this.paneles[0]);
+        this.add(this.paneles[3]);
 //        this.actualizarPanel(0);
         
     }
