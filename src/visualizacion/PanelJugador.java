@@ -59,14 +59,19 @@ public class PanelJugador extends Panel{
                 break;
             case "<":
                 this.jugador.getLetrasRespuesta().remove(this.jugador.getLetrasRespuesta().size() - 1);
-//                cambiar color tecla
                 this.repaint();
                 break;
             default:
                 if(source.getBackground().equals(this.getVerdeMedio())){
                     this.jugador.getLetrasRespuesta().add(new Letra(false,textoBoton.toCharArray()[0]));
-//                    cambiar color tecla
-                    jugador.setAdivinado(this.jugador.verificar());
+                    if(jugador.getNombre().toCharArray().length == jugador.getLetrasRespuesta().size()){
+                        jugador.setIntentos(jugador.getIntentos()+1);
+                        boolean gano = this.jugador.verificar();
+                        jugador.setAdivinado(gano);
+                        if(gano){
+                            this.getVentana().getJuego().setMonedas(this.getVentana().getJuego().getMonedas() + jugador.determinarMonedas(jugador.getIntentos()));
+                        }
+                    }
                     this.repaint();
                 }
                 break;
@@ -115,19 +120,38 @@ public class PanelJugador extends Panel{
         siguiente.addActionListener(this);
         this.add(siguiente);
         this.agregarCamisetas(g);
-        JLabel intentos = new JLabel("INTENTOS: " + this.jugador.getIntentos());
-        intentos.setFont(this.getFont());
-        intentos.setBounds(356, 295, 200, 50);
-        intentos.setLocation(356, 295);
-        intentos.setForeground(Color.WHITE);
-        if(jugador.isAdivinado() && (jugador.getLetrasDisponibles().length == jugador.getLetrasRespuesta().size())){
+        System.out.println("adivinado: "+ jugador.isAdivinado());
+        if(jugador.isAdivinado() && (jugador.getNombre().toCharArray().length == jugador.getLetrasRespuesta().size())){
             JLabel correcto = new JLabel("¡CORRECTO!");
             correcto.setFont(this.getFont().deriveFont(0,25));
-            correcto.setBounds(340, 300, 200, 50);
-            correcto.setLocation(340, 300);
-            correcto.setForeground(this.getDorado());
-        this.add(monedas);
+            correcto.setBounds(330, 300, 200, 50);
+            correcto.setLocation(330, 300);
+            correcto.setForeground(Color.WHITE);
+            this.add(correcto);
+            JLabel name = new JLabel(jugador.getNombre());
+            name.setFont(this.getFont().deriveFont(0,35));
+            name.setBounds(350, 325, 400, 50);
+            name.setLocation(350, 325);
+            name.setForeground(this.getVerdeClaro());
+            this.add(name);
+            JLabel inten = new JLabel("ADININADO AL INTENTO " + jugador.getIntentos());
+            inten.setFont(this.getFont().deriveFont(0,20));
+            inten.setBounds(285, 350, 400, 50);
+            inten.setLocation(285, 350);
+            inten.setForeground(Color.WHITE);
+            this.add(inten);
+            JLabel mon = new JLabel("+" + jugador.determinarMonedas(jugador.getIntentos()) + " MONEDAS");
+            mon.setFont(this.getFont().deriveFont(0,20));
+            mon.setBounds(340, 375, 500, 50);
+            mon.setLocation(340, 375);
+            mon.setForeground(Color.WHITE);
+            this.add(mon);
         }else{
+            JLabel intentos = new JLabel("INTENTOS: " + this.jugador.getIntentos());
+            intentos.setFont(this.getFont());
+            intentos.setBounds(356, 295, 200, 50);
+            intentos.setLocation(356, 295);
+            intentos.setForeground(Color.WHITE);
             this.add(intentos);
             this.agregarCampoRta();
             this.agregarDisponibles();
@@ -185,10 +209,8 @@ public class PanelJugador extends Panel{
                 break;
         }
         for(int i = 0;i<size;i++){
-                System.out.println(this.jugador.getLetrasRespuesta().size());
                 JButton tecla;
                 if(i < this.jugador.getLetrasRespuesta().size()){
-                    System.out.println(this.jugador.getLetrasRespuesta().get(i).getLetra()+"");
                     tecla = new JButton(this.jugador.getLetrasRespuesta().get(i).getLetra()+"");
                 }else{
                     tecla = new JButton(" ");

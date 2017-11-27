@@ -141,13 +141,24 @@ public class Jugador {
     public boolean verificar() {
         boolean rta = true;
         char[] name = this.nombre.toCharArray();
-        if(this.letrasDisponibles.length == this.letrasRespuesta.size()){
-            for(int i = 0; i<this.letrasDisponibles.length; i++){
-                rta = rta && (this.letrasDisponibles[i].equals(this.letrasRespuesta.get(i)));
+        if(name.length == this.letrasRespuesta.size()){
+            for(int i = 0; i<name.length; i++){
+                rta = rta && (name[i] == (this.letrasRespuesta.get(i).getLetra()));
             }
         }else{
             rta = false;
         }
         return rta;
+    }
+
+    public int determinarMonedas(int intentos) {
+        switch (intentos){
+            case 1:
+                return 5;
+            case 2:
+                return 3;
+            default:
+                return 1;
+        }
     }
 }
