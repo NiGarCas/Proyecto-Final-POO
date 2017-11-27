@@ -30,6 +30,8 @@ public class PanelPistas extends Panel{
     
     @Override
     public void paintComponent(Graphics g){
+        this.nivel = this.getVentana().getJuego().getUnJugador().getNivelActual();
+        this.jugador = this.getVentana().getJuego().getUnJugador().getJugador_Actual();
         this.setLayout(null);
         super.paintComponent(g);
         Image fondo = loadImage("Fondo.png");

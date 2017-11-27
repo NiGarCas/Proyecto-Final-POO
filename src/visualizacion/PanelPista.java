@@ -31,6 +31,8 @@ public class PanelPista extends Panel{
     
     @Override
     public void paintComponent(Graphics g){
+        this.nivel = this.getVentana().getJuego().getUnJugador().getNivelActual();
+        this.jugador = this.getVentana().getJuego().getUnJugador().getJugador_Actual();
         this.setLayout(null);
         super.paintComponent(g);
         Image fondo = loadImage("Fondo.png");
@@ -38,7 +40,7 @@ public class PanelPista extends Panel{
         this.agregarComponentes(g);
         if(this.advertencia){
         Image adv = loadImage("Advertencia.png");
-        g.drawImage(adv, 107, 320, this);
+        g.drawImage(adv, 107, 280, this);
         }
     }
     @Override
@@ -109,14 +111,15 @@ public class PanelPista extends Panel{
         pista.setForeground(this.getVerdeClaro());
         pista.addActionListener(this);
         this.add(pista);
+        JLabel respuesta = null;
         if(this.getVentana().getJuego().isPudoRestar()){
-            JLabel respuesta;
             switch(jugador.getPista()){
             case 1:
                 respuesta = new JLabel(jugador.getPais());
                 break;
             case 2:
                 respuesta = new JLabel (jugador.getPosicion());
+                System.out.println(jugador.getPosicion());
                 break;
             case 3:
                 respuesta = new JLabel (jugador.getPrimeraLetra()+"");
@@ -131,11 +134,13 @@ public class PanelPista extends Panel{
                 respuesta = new JLabel("error");
                 break;
             }
-            respuesta.setFont(this.getFont().deriveFont(0,90));
-            respuesta.setBounds(50, 250, 200, 1000);
+            respuesta.setFont(this.getFont().deriveFont(0,40));
+            respuesta.setBounds(50, 250, 700, 100);
             respuesta.setLocation(50, 250);
             respuesta.setForeground(Color.WHITE);
             this.add(respuesta);
+
+            this.advertencia = false;
         }else{
             this.advertencia = true;
         }

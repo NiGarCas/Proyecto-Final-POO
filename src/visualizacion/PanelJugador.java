@@ -58,14 +58,16 @@ public class PanelJugador extends Panel{
                 this.repaint();
                 break;
             case "<":
-                this.getVentana().getJuego().getUnJugador().siguienteJugador();
+                this.jugador.getLetrasRespuesta().remove(this.jugador.getLetrasRespuesta().size() - 1);
+//                cambiar color tecla
                 this.repaint();
                 break;
             default:
                 if(source.getBackground().equals(this.getVerdeMedio())){
                     this.jugador.getLetrasRespuesta().add(new Letra(false,textoBoton.toCharArray()[0]));
+//                    cambiar color tecla
+                    jugador.setAdivinado(this.jugador.verificar());
                     this.repaint();
-                source.setBackground(this.getVerdeClaro());
                 }
                 break;
         }
@@ -118,9 +120,18 @@ public class PanelJugador extends Panel{
         intentos.setBounds(356, 295, 200, 50);
         intentos.setLocation(356, 295);
         intentos.setForeground(Color.WHITE);
-        this.add(intentos);
-        this.agregarCampoRta();
-        this.agregarDisponibles();
+        if(jugador.isAdivinado() && (jugador.getLetrasDisponibles().length == jugador.getLetrasRespuesta().size())){
+            JLabel correcto = new JLabel("¡CORRECTO!");
+            correcto.setFont(this.getFont().deriveFont(0,25));
+            correcto.setBounds(340, 300, 200, 50);
+            correcto.setLocation(340, 300);
+            correcto.setForeground(this.getDorado());
+        this.add(monedas);
+        }else{
+            this.add(intentos);
+            this.agregarCampoRta();
+            this.agregarDisponibles();
+        }
     }
 
     private void agregarCampoRta() {
@@ -174,13 +185,15 @@ public class PanelJugador extends Panel{
                 break;
         }
         for(int i = 0;i<size;i++){
+                System.out.println(this.jugador.getLetrasRespuesta().size());
+                JButton tecla;
                 if(i < this.jugador.getLetrasRespuesta().size()){
-                    JButton tecla = new JButton(this.jugador.getLetrasRespuesta().get(i).getLetra()+"");
+                    System.out.println(this.jugador.getLetrasRespuesta().get(i).getLetra()+"");
+                    tecla = new JButton(this.jugador.getLetrasRespuesta().get(i).getLetra()+"");
                 }else{
-                    JButton tecla = new JButton(" ");
+                    tecla = new JButton(" ");
                 }
-                JButton tecla = new JButton(" ");
-                tecla.setFont(this.getFont());
+                tecla.setFont(this.getFont().deriveFont(0, 10));
                 tecla.setBounds(inicio +(i*45), 337, 43, 25);
                 tecla.setLocation(inicio +(i*45), 337);
                 tecla.setBackground(Color.WHITE);

@@ -118,7 +118,6 @@ public class Jugador {
 
     private void crearLetrasDisponibles(String nombre) {
         char[] arreglo = nombre.toCharArray();
-        System.out.println("NUM: " + arreglo.length);
         Letra[] letras = new Letra[15];
         int numero;
         int i = 0;
@@ -136,9 +135,19 @@ public class Jugador {
             letras[k] = new Letra(false,a);
             }
         }
-        for (Letra l : letras){
-        System.out.println(l.getLetra());
-        }
         this.letrasDisponibles = letras;
+    }
+
+    public boolean verificar() {
+        boolean rta = true;
+        char[] name = this.nombre.toCharArray();
+        if(this.letrasDisponibles.length == this.letrasRespuesta.size()){
+            for(int i = 0; i<this.letrasDisponibles.length; i++){
+                rta = rta && (this.letrasDisponibles[i].equals(this.letrasRespuesta.get(i)));
+            }
+        }else{
+            rta = false;
+        }
+        return rta;
     }
 }

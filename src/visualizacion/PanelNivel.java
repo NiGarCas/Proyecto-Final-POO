@@ -83,11 +83,11 @@ public class PanelNivel extends Panel{
             Jugador jugador = this.nivel.getJugadores().get(i);
             JButton bJugador;
             if(jugador.isAdivinado()){
-                bJugador = new JButton((i+1) + " - " + jugador.getNombre());
+                bJugador = new JButton("0" +(i+1) + " - " + jugador.getNombre());
                 bJugador.setBackground(this.getVerdeMedio());
                 bJugador.setForeground(Color.WHITE);
             }else{
-                bJugador = new JButton((i+1) + " - " + "?");
+                bJugador = new JButton("0" +(i+1) + " - " + "?");
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
@@ -101,11 +101,19 @@ public class PanelNivel extends Panel{
             Jugador jugador = this.nivel.getJugadores().get(i);
             JButton bJugador;
             if(jugador.isAdivinado()){
-                bJugador = new JButton((i+1) + " - " + jugador.getNombre());
+                if(i!=10){
+                    bJugador = new JButton("0" +(i+1) + " - " + jugador.getNombre());
+                }else{
+                    bJugador = new JButton((i+1) + " - " + jugador.getNombre());
+                }
                 bJugador.setBackground(this.getVerdeMedio());
                 bJugador.setForeground(Color.WHITE);
             }else{
-                bJugador = new JButton((i+1) + " - " + "?");
+                if(i!=10){
+                    bJugador = new JButton("0" +(i+1) + " - " + "?");
+                }else{
+                    bJugador = new JButton((i+1) + " - " + "?");
+                }
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }

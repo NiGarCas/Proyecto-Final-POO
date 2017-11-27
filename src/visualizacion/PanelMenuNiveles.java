@@ -47,7 +47,6 @@ public class PanelMenuNiveles extends Panel{
                 int nivel = this.unjugador.determinarNivel(textoBoton);
                 if(nivel != 0){
                     this.getVentana().getJuego().getUnJugador().setNivelActual(this.getVentana().getJuego().getUnJugador().getNiveles().get(nivel-1));
-                    System.out.println("RESTANTES: " + this.getVentana().getJuego().getUnJugador().getNivelActual().getRestantesParaDesbloquear());
                     if(this.getVentana().getJuego().getUnJugador().getNivelActual().isDesbloqueado()){
                     
                     this.getVentana().actualizarPanel(2);

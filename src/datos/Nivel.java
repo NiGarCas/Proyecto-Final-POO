@@ -67,28 +67,75 @@ public class Nivel {
     
     public int determinarJugador(String textoBoton) {
         char[] a = textoBoton.toCharArray();
-        switch (a[0]){
+        char b = a[0];
+        char c = a[1];
+        int d;
+        int e;
+        switch (b){
             case 49:
-                return 1;
+                d = 1;
+                break;
             case 50:
-                return 2;
+                d = 2;
+                break;
             case 51:
-                return 3;
+                d = 3;
+                break;
             case 52:
-                return 4;
+                d = 4;
+                break;
             case 53:
-                return 5;
+                d = 5;
+                break;
             case 54:
-                return 6;
+                d = 6;
+                break;
             case 55:
-                return 7;
+                d = 7;
+                break;
             case 56:
-                return 8;
+                d = 8;
+                break;
             case 57:
-                return 9;
+                d = 9;
+                break;
             default:
-                return 0;
+                d = 0;
+                break;
         }
+        switch (c){
+            case 49:
+                e = 1;
+                break;
+            case 50:
+                e = 2;
+                break;
+            case 51:
+                e = 3;
+                break;
+            case 52:
+                e = 4;
+                break;
+            case 53:
+                e = 5;
+                break;
+            case 54:
+                e = 6;
+                break;
+            case 55:
+                e = 7;
+                break;
+            case 56:
+                e = 8;
+                break;
+            case 57:
+                e = 9;
+                break;
+            default:
+                e = 0;
+                break;
+        }
+        return (e + (d*10));
     }
 
     public int getNumeroJugador(Jugador jugador) {

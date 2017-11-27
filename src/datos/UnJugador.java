@@ -95,6 +95,7 @@ public class UnJugador {
         for(int i = 1;i<30;i++){
             if(this.jugador_Actual.getNombre().equals(this.nivelActual.getJugadores().get(i).getNombre())){
                 this.setJugador_Actual(this.nivelActual.getJugadores().get(i-1));
+                break;
             }
         }
     }
@@ -103,6 +104,7 @@ public class UnJugador {
         for(int i = 0;i<29;i++){
             if(this.jugador_Actual.getNombre().equals(this.nivelActual.getJugadores().get(i).getNombre())){
                 this.setJugador_Actual(this.nivelActual.getJugadores().get(i+1));
+                break;
             }
         }
     }
