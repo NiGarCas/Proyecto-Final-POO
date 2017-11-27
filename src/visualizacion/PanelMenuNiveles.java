@@ -47,7 +47,11 @@ public class PanelMenuNiveles extends Panel{
                 int nivel = this.unjugador.determinarNivel(textoBoton);
                 if(nivel != 0){
                     this.getVentana().getJuego().getUnJugador().setNivelActual(this.getVentana().getJuego().getUnJugador().getNiveles().get(nivel-1));
+                    System.out.println("RESTANTES: " + this.getVentana().getJuego().getUnJugador().getNivelActual().getRestantesParaDesbloquear());
+                    if(this.getVentana().getJuego().getUnJugador().getNivelActual().isDesbloqueado()){
+                    
                     this.getVentana().actualizarPanel(2);
+                    }
                 }
                 break;
         }
@@ -83,14 +87,15 @@ public class PanelMenuNiveles extends Panel{
                 bNivel = new JButton(nivel.getNumero() + " - " + nivel.getJugadoresAdivinados() + "/30");
                 bNivel.setBackground(this.getVerdeMedio());
                 bNivel.setForeground(Color.WHITE);
+                bNivel.setFont(this.getFont().deriveFont(0, 30));
             }else{
-                bNivel = new JButton(nivel.getRestantesParaDesbloquear() + " jugadores restantes para desbloquear");
+                bNivel = new JButton(nivel.getNumero() + " - " + nivel.getRestantesParaDesbloquear() + " JUG. +");
                 bNivel.setBackground(this.getVerdeOscuro());
                 bNivel.setForeground(this.getVerdeMedio());
+                bNivel.setFont(this.getFont().deriveFont(0, 20));
             }
-            bNivel.setFont(this.getFont());
-            bNivel.setBounds(50+(i*107), 200, 200, 80);
-            bNivel.setLocation(50+(i*107), 200);
+            bNivel.setBounds(50+(i*250), 170, 200, 80);
+            bNivel.setLocation(50+(i*250), 170);
             bNivel.addActionListener(this);
             this.add(bNivel);
         }
@@ -101,14 +106,15 @@ public class PanelMenuNiveles extends Panel{
                 bNivel = new JButton(nivel.getNumero() + " - " + nivel.getJugadoresAdivinados() + "/30");
                 bNivel.setBackground(this.getVerdeMedio());
                 bNivel.setForeground(Color.WHITE);
+                bNivel.setFont(this.getFont().deriveFont(0, 30));
             }else{
-                bNivel = new JButton(nivel.getRestantesParaDesbloquear() + " jugadores restantes para desbloquear");
+                bNivel = new JButton(nivel.getNumero() + " - " + nivel.getRestantesParaDesbloquear() + " JUG. +");
                 bNivel.setBackground(this.getVerdeOscuro());
                 bNivel.setForeground(this.getVerdeMedio());
+                bNivel.setFont(this.getFont().deriveFont(0, 20));
             }
-            bNivel.setFont(this.getFont());
-            bNivel.setBounds(50+(i*107), 304, 200, 80);
-            bNivel.setLocation(50+(i*107), 304);
+            bNivel.setBounds(50+((i-3)*250), 274, 200, 80);
+            bNivel.setLocation(50+((i-3)*250), 274);
             bNivel.addActionListener(this);
             this.add(bNivel);
         }
@@ -119,14 +125,15 @@ public class PanelMenuNiveles extends Panel{
                 bNivel = new JButton(nivel.getNumero() + " - " + nivel.getJugadoresAdivinados() + "/30");
                 bNivel.setBackground(this.getVerdeMedio());
                 bNivel.setForeground(Color.WHITE);
+                bNivel.setFont(this.getFont().deriveFont(0, 30));
             }else{
-                bNivel = new JButton(nivel.getNumero() + " - " + nivel.getRestantesParaDesbloquear() + " jugadores restantes para desbloquear");
+                bNivel = new JButton(nivel.getNumero() + " - " + nivel.getRestantesParaDesbloquear() + " JUG. +");
                 bNivel.setBackground(this.getVerdeOscuro());
                 bNivel.setForeground(this.getVerdeMedio());
+                bNivel.setFont(this.getFont().deriveFont(0, 20));
             }
-            bNivel.setFont(this.getFont());
-            bNivel.setBounds(50+(i*107), 408, 200, 80);
-            bNivel.setLocation(50+(i*107), 408);
+            bNivel.setBounds(50+((i-6)*250), 378, 200, 80);
+            bNivel.setLocation(50+((i-6)*250), 378);
             bNivel.addActionListener(this);
             this.add(bNivel);
         }

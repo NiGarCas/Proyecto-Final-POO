@@ -87,8 +87,7 @@ public class PanelPistas extends Panel{
         niveles.setLocation(40, 15);
         niveles.setForeground(Color.WHITE);
         this.add(niveles);
-//        JLabel niv_jug = new JLabel("NIVEL " + nivel.getNumero() + " - JUGADOR #" + nivel.getNumeroJugador(jugador));
-        JLabel niv_jug = new JLabel("NIVEL 2 - JUGADOR #30");
+        JLabel niv_jug = new JLabel("NIVEL " + nivel.getNumero() + " - JUGADOR #" + nivel.getNumeroJugador(jugador));
         niv_jug.setFont(this.getFont().deriveFont(0, 30));
         niv_jug.setBounds(40, 90, 500, 110);
         niv_jug.setLocation(40, 90);

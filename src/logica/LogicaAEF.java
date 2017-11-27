@@ -11,11 +11,9 @@ import datos.Juego;
 import datos.Jugador;
 import datos.Nivel;
 import datos.UnJugador;
-import java.awt.BorderLayout;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import visualizacion.Ventana;
 
 /**
  *
@@ -24,15 +22,14 @@ import visualizacion.Ventana;
 public class LogicaAEF {
     
     private Juego juego;
-    public static void main(String[] args) {
-        UnJugador unJugador = new UnJugador(0);
-        DosJugadores dosJugadores = new DosJugadores();
-        Juego juego = new Juego("ok",0,unJugador,dosJugadores);
-        Ventana ventana = new Ventana(juego);
-//        ventana.add(ventana.getPanel_actual());
-        ventana.setVisible(true);
+
+    public LogicaAEF() {
     }
 
+    public Juego getJuego() {
+        return juego;
+    }
+    
     public void setJuego(Juego juego) {
         this.juego = juego;
     }
@@ -46,8 +43,8 @@ public class LogicaAEF {
                flujoEntrada.useDelimiter(",");
                while(flujoEntrada.hasNext()){
                    String nombre = flujoEntrada.next().trim();
-                   int monedas = Integer.parseInt(flujoEntrada.next().trim());
-                   int adivinados = Integer.parseInt(flujoEntrada.next().trim());
+                   int monedas = flujoEntrada.nextInt();
+                   int adivinados = flujoEntrada.nextInt();
                    UnJugador unJugador = new UnJugador(adivinados);
                    DosJugadores dosJugadores = new DosJugadores();
                    Juego juego = new Juego(nombre,monedas,unJugador,dosJugadores);
@@ -80,30 +77,30 @@ public class LogicaAEF {
                flujoEntrada.useDelimiter(",");
                String prox  = flujoEntrada.next().trim();
                while(flujoEntrada.hasNext()){
-                   switch (prox) {
-                       case "N":
-                           {
+                   while(prox.equals("N")) {
+                               int numero = flujoEntrada.nextInt();
+                               int adivinados = flujoEntrada.nextInt();
+                               int rpd = flujoEntrada.nextInt();
+                               Nivel nivel = new Nivel(numero, adivinados, rpd);
                                prox = flujoEntrada.next().trim();
-                               if(prox.equals("J")){}else{
-                                   System.out.println("error lectura jugadores");
-                               }
-                               int numero = Integer.parseInt(flujoEntrada.next().trim());
-                               int adivinados = Integer.parseInt(flujoEntrada.next().trim());
-                               int rpd = Integer.parseInt(flujoEntrada.next().trim());
-                               Nivel nivel = new Nivel(numero,adivinados,rpd);
                                for(int i = 0; i<30;i++){
+                                    if(prox.equals("J")){}else{
+                                        System.out.println("error lectura jugadores");
+                                    }
                                    String nombre = flujoEntrada.next().trim();
                                    boolean p = false;
-                                   int ad= Integer.parseInt(flujoEntrada.next().trim());
+                                   int ad = flujoEntrada.nextInt();
                                    if(ad == 1){
                                        p = true;
                                    }
-                                   int intentos = Integer.parseInt(flujoEntrada.next().trim());
+                                   int intentos = flujoEntrada.nextInt();
                                    String pais = flujoEntrada.next().trim();
                                    String posicion = flujoEntrada.next().trim();
                                    Jugador jugador = new Jugador(p,nombre,intentos,pais,posicion);
+                                   nivel.agregarJugador(jugador);
+                                   
                                    prox = flujoEntrada.next().trim();
-                                   while (!(prox.equals("N"))){
+                                   while ((!(prox.equals("N")))&&(!(prox.equals("J")))){
                                        String equipo = prox;
                                        Equipo eq = this.juego.determinarEquipo(equipo);
                                        jugador.agregarEquipo(eq);
@@ -114,8 +111,10 @@ public class LogicaAEF {
                                        }
                                    }
                                }
+                               this.juego.getUnJugador().agregarNivel(nivel);
+                               break;
                            }
-                   }
+                   
                }
            } catch (FileNotFoundException ex) {
                System.out.println("Archivo de datos no Encontrado");

@@ -36,10 +36,12 @@ public class Ventana extends JFrame{
         this.paneles[3] = new PanelJugador(this);
         this.paneles[4] = new PanelPistas(this);
         this.paneles[5] = new PanelPista(this);
+//        this.add(this.panel_actual);
         this.panel_actual = new JPanel();
-        this.add(this.paneles[3]);
-//        this.actualizarPanel(0);
-        
+        panel_actual.setLayout(null);
+        this.actualizarPanel(0);
+        this.add(panel_actual);
+        this.setVisible(true);
     }
 
     public Juego getJuego() {
@@ -59,14 +61,9 @@ public class Ventana extends JFrame{
     }
     
     public void actualizarPanel(int k){
-        this.dispose();
-        this.removeAll();
-        this.add(this.paneles[4]);
-        this.setVisible(true);
-//        this.panel_actual.removeAll();
-//        this.panel_actual.add(this.getPaneles()[k]);
-//        this.panel_actual.updateUI();
-//        System.out.println(this.panel_actual.toString());
-//        this.panel_actual.repaint();
+        this.getPanel_actual().removeAll();
+        this.getPanel_actual().add(this.paneles[k]);
+        this.getPanel_actual().updateUI();
+        this.getPanel_actual().repaint();
     }
 }

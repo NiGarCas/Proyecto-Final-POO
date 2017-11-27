@@ -6,6 +6,7 @@
 package visualizacion;
 
 import datos.Jugador;
+import datos.Letra;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -22,11 +23,12 @@ public class PanelJugador extends Panel{
     private Jugador jugador;
     public PanelJugador(Ventana Ventana) {
         super(Ventana);
-        this.jugador = this.getVentana().getJuego().getUnJugador().getJugador_Actual();
+        
     }
     
     @Override
     public void paintComponent(Graphics g){
+        this.jugador = this.getVentana().getJuego().getUnJugador().getJugador_Actual();
         this.setLayout(null);
         super.paintComponent(g);
         Image fondo = loadImage("Fondo.png");
@@ -48,13 +50,23 @@ public class PanelJugador extends Panel{
                 break;
             case "ANTERIOR  JUGADOR":
                 this.getVentana().getJuego().getUnJugador().anteriorJugador();
-                this.getVentana().actualizarPanel(3);
+                this.repaint();
+                System.out.println(this.jugador.getNombre());
                 break;
             case "SIGUIENTE  JUGADOR":
                 this.getVentana().getJuego().getUnJugador().siguienteJugador();
-                this.getVentana().actualizarPanel(3);
+                this.repaint();
+                break;
+            case "<":
+                this.getVentana().getJuego().getUnJugador().siguienteJugador();
+                this.repaint();
                 break;
             default:
+                if(source.getBackground().equals(this.getVerdeMedio())){
+                    this.jugador.getLetrasRespuesta().add(new Letra(false,textoBoton.toCharArray()[0]));
+                    this.repaint();
+                source.setBackground(this.getVerdeClaro());
+                }
                 break;
         }
     }
@@ -101,8 +113,7 @@ public class PanelJugador extends Panel{
         siguiente.addActionListener(this);
         this.add(siguiente);
         this.agregarCamisetas(g);
-//        JLabel intentos = new JLabel("INTENTOS: " + this.jugador.getIntentos());
-        JLabel intentos = new JLabel("INTENTOS: 0");
+        JLabel intentos = new JLabel("INTENTOS: " + this.jugador.getIntentos());
         intentos.setFont(this.getFont());
         intentos.setBounds(356, 295, 200, 50);
         intentos.setLocation(356, 295);
@@ -113,8 +124,7 @@ public class PanelJugador extends Panel{
     }
 
     private void agregarCampoRta() {
-//        int size = this.jugador.getNombre().toCharArray().length;
-        int size = 9;
+        int size = this.jugador.getNombre().toCharArray().length;
         int inicio = 0;
         switch(size){
             case 1:
@@ -164,11 +174,11 @@ public class PanelJugador extends Panel{
                 break;
         }
         for(int i = 0;i<size;i++){
-//                if(i < this.jugador.getLetrasRespuesta().size()){
-//                    JButton tecla = new JButton(this.jugador.getLetrasRespuesta().get(i).getLetra()+"");
-//                }else{
-//                    JButton tecla = new JButton(" ");
-//                }
+                if(i < this.jugador.getLetrasRespuesta().size()){
+                    JButton tecla = new JButton(this.jugador.getLetrasRespuesta().get(i).getLetra()+"");
+                }else{
+                    JButton tecla = new JButton(" ");
+                }
                 JButton tecla = new JButton(" ");
                 tecla.setFont(this.getFont());
                 tecla.setBounds(inicio +(i*45), 337, 43, 25);
@@ -181,8 +191,8 @@ public class PanelJugador extends Panel{
     }
 
     private void agregarCamisetas(Graphics g) {
-//        int cantidad = this.jugador.getEquipos().size();
-        int cantidad = 9;
+        this.jugador = this.getVentana().getJuego().getUnJugador().getJugador_Actual();
+        int cantidad = this.jugador.getEquipos().size();
         switch(cantidad){
             case 1:
                 g.drawImage(this.loadImage(jugador.getEquipos().get(0).getCamiseta()), 350, 163, 450, 275, 0, 0, 238, 150, this);
@@ -284,9 +294,8 @@ public class PanelJugador extends Panel{
 
     private void agregarDisponibles() {
         for(int i = 0; i< 8; i++){
-//            JButton tecla = new JButton(this.jugador.getLetrasDisponibles()[i].getLetra() + "");
-            JButton tecla = new JButton("P");
-            tecla.setFont(this.getFont());
+            JButton tecla = new JButton(this.jugador.getLetrasDisponibles()[i].getLetra() + "");
+            tecla.setFont(this.getFont().deriveFont(0, 10));
             tecla.setBounds(221 + (i*45), 375, 43, 25);
             tecla.setLocation(221 + (i*45), 375);
             tecla.setBackground(this.getVerdeMedio());
@@ -295,9 +304,8 @@ public class PanelJugador extends Panel{
             this.add(tecla);
         }
         for(int i = 8; i< 15; i++){
-//            JButton tecla = new JButton(this.jugador.getLetrasDisponibles()[i].getLetra() + "");
-            JButton tecla = new JButton("P");
-            tecla.setFont(this.getFont());
+            JButton tecla = new JButton(this.jugador.getLetrasDisponibles()[i].getLetra() + "");
+            tecla.setFont(this.getFont().deriveFont(0, 10));
             tecla.setBounds(221 + ((i-8)*45), 402, 43, 25);
             tecla.setLocation(221 + ((i-8)*45), 402);
             tecla.setBackground(this.getVerdeMedio());

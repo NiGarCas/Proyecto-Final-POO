@@ -46,8 +46,9 @@ public class PanelNivel extends Panel{
                 break;
             default:
                 int jugador = this.nivel.determinarJugador(textoBoton);
+                System.out.println(jugador);
                 if(jugador != 0){
-                this.getVentana().getJuego().getUnJugador().setJugador_Actual(this.getVentana().getJuego().getUnJugador().getNivelActual().getJugadores().get(jugador));
+                this.getVentana().getJuego().getUnJugador().setJugador_Actual(this.getVentana().getJuego().getUnJugador().getNivelActual().getJugadores().get(jugador-1));
                 this.getVentana().actualizarPanel(3);
                 }
                 break;
@@ -77,21 +78,22 @@ public class PanelNivel extends Panel{
         atras.setForeground(Color.WHITE);
         atras.addActionListener(this);
         this.add(atras);
+        this.nivel = this.getVentana().getJuego().getUnJugador().getNivelActual();
         for (int i = 0; i<5;i++){
             Jugador jugador = this.nivel.getJugadores().get(i);
             JButton bJugador;
             if(jugador.isAdivinado()){
-                bJugador = new JButton(jugador.getNombre());
+                bJugador = new JButton((i+1) + " - " + jugador.getNombre());
                 bJugador.setBackground(this.getVerdeMedio());
                 bJugador.setForeground(Color.WHITE);
             }else{
-                bJugador = new JButton("?");
+                bJugador = new JButton((i+1) + " - " + "?");
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
             bJugador.setFont(this.getFont());
-            bJugador.setBounds(50+(i*147), 200, 120, 35);
-            bJugador.setLocation(50+(i*147), 200);
+            bJugador.setBounds(50+(i*147), 170, 120, 35);
+            bJugador.setLocation(50+(i*147), 170);
             bJugador.addActionListener(this);
             this.add(bJugador);
         }
@@ -99,17 +101,17 @@ public class PanelNivel extends Panel{
             Jugador jugador = this.nivel.getJugadores().get(i);
             JButton bJugador;
             if(jugador.isAdivinado()){
-                bJugador = new JButton(jugador.getNombre());
+                bJugador = new JButton((i+1) + " - " + jugador.getNombre());
                 bJugador.setBackground(this.getVerdeMedio());
                 bJugador.setForeground(Color.WHITE);
             }else{
-                bJugador = new JButton("?");
+                bJugador = new JButton((i+1) + " - " + "?");
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
             bJugador.setFont(this.getFont());
-            bJugador.setBounds(50+(i*147), 254, 120, 35);
-            bJugador.setLocation(50+(i*147), 254);
+            bJugador.setBounds(50+((i-5)*147), 224, 120, 35);
+            bJugador.setLocation(50+((i-5)*147), 224);
             bJugador.addActionListener(this);
             this.add(bJugador);
         }
@@ -117,17 +119,17 @@ public class PanelNivel extends Panel{
             Jugador jugador = this.nivel.getJugadores().get(i);
             JButton bJugador;
             if(jugador.isAdivinado()){
-                bJugador = new JButton(jugador.getNombre());
+                bJugador = new JButton((i+1) + " - " + jugador.getNombre());
                 bJugador.setBackground(this.getVerdeMedio());
                 bJugador.setForeground(Color.WHITE);
             }else{
-                bJugador = new JButton("?");
+                bJugador = new JButton((i+1) + " - " + "?");
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
             bJugador.setFont(this.getFont());
-            bJugador.setBounds(50+(i*147), 308, 120, 35);
-            bJugador.setLocation(50+(i*147), 308);
+            bJugador.setBounds(50+((i-10)*147), 278, 120, 35);
+            bJugador.setLocation(50+((i-10)*147), 278);
             bJugador.addActionListener(this);
             this.add(bJugador);
         }
@@ -135,17 +137,17 @@ public class PanelNivel extends Panel{
             Jugador jugador = this.nivel.getJugadores().get(i);
             JButton bJugador;
             if(jugador.isAdivinado()){
-                bJugador = new JButton(jugador.getNombre());
+                bJugador = new JButton((i+1) + " - " + jugador.getNombre());
                 bJugador.setBackground(this.getVerdeMedio());
                 bJugador.setForeground(Color.WHITE);
             }else{
-                bJugador = new JButton("?");
+                bJugador = new JButton((i+1) + " - " + "?");
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
             bJugador.setFont(this.getFont());
-            bJugador.setBounds(50+(i*147), 362, 120, 35);
-            bJugador.setLocation(50+(i*147), 362);
+            bJugador.setBounds(50+((i-15)*147), 332, 120, 35);
+            bJugador.setLocation(50+((i-15)*147), 332);
             bJugador.addActionListener(this);
             this.add(bJugador);
         }
@@ -153,17 +155,17 @@ public class PanelNivel extends Panel{
             Jugador jugador = this.nivel.getJugadores().get(i);
             JButton bJugador;
             if(jugador.isAdivinado()){
-                bJugador = new JButton(jugador.getNombre());
+                bJugador = new JButton((i+1) + " - " + jugador.getNombre());
                 bJugador.setBackground(this.getVerdeMedio());
                 bJugador.setForeground(Color.WHITE);
             }else{
-                bJugador = new JButton("?");
+                bJugador = new JButton((i+1) + " - " + "?");
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
             bJugador.setFont(this.getFont());
-            bJugador.setBounds(50+(i*147), 416, 120, 35);
-            bJugador.setLocation(50+(i*147), 416);
+            bJugador.setBounds(50+((i-20)*147), 386, 120, 35);
+            bJugador.setLocation(50+((i-20)*147), 386);
             bJugador.addActionListener(this);
             this.add(bJugador);
         }
@@ -171,17 +173,17 @@ public class PanelNivel extends Panel{
             Jugador jugador = this.nivel.getJugadores().get(i);
             JButton bJugador;
             if(jugador.isAdivinado()){
-                bJugador = new JButton(jugador.getNombre());
+                bJugador = new JButton((i+1) + " - " + jugador.getNombre());
                 bJugador.setBackground(this.getVerdeMedio());
                 bJugador.setForeground(Color.WHITE);
             }else{
-                bJugador = new JButton("?");
+                bJugador = new JButton((i+1) + " - " + "?");
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
             bJugador.setFont(this.getFont());
-            bJugador.setBounds(50+(i*147), 470, 120, 35);
-            bJugador.setLocation(50+(i*147), 470);
+            bJugador.setBounds(50+((i-25)*147), 440, 120, 35);
+            bJugador.setLocation(50+((i-25)*147), 440);
             bJugador.addActionListener(this);
             this.add(bJugador);
         }

@@ -16,14 +16,14 @@ public class Nivel {
     private UnJugador unjugador;
     private int numero;
     private int jugadoresAdivinados;
-    private int necesariosParaDesbloquear;
     private int restantesParaDesbloquear;
     private ArrayList<Jugador> jugadores;
 
-    public Nivel(int numero, int jugadoresAdivinados, int necesariosParaDesbloquear) {
+    public Nivel(int numero, int jugadoresAdivinados, int restantesParaDesbloquear) {
         this.numero = numero;
+        this.jugadores = new ArrayList();
         this.jugadoresAdivinados = jugadoresAdivinados;
-        this.necesariosParaDesbloquear = necesariosParaDesbloquear;
+        this.restantesParaDesbloquear = restantesParaDesbloquear;
     }
 
     public UnJugador getUnjugador() {
@@ -37,11 +37,7 @@ public class Nivel {
     public int getJugadoresAdivinados() {
         return jugadoresAdivinados;
     }
-
-    public int getNecesariosParaDesbloquear() {
-        return necesariosParaDesbloquear;
-    }
-
+    
     public int getRestantesParaDesbloquear() {
         return restantesParaDesbloquear;
     }
@@ -57,26 +53,42 @@ public class Nivel {
     public void setRestantesParaDesbloquear(int restantesParaDesbloquear) {
         this.restantesParaDesbloquear = restantesParaDesbloquear;
     }
-    public void agregarJugador(boolean adivinado, String nombre, int intentos, String pais, String posicion){
-        this.jugadores.add(new Jugador(adivinado,nombre,intentos,pais,posicion));
-    }
+    
     public boolean isDesbloqueado(){
-        if(this.restantesParaDesbloquear < 0){
+        if(this.restantesParaDesbloquear <= 0){
             return true;
         }else{
             return false;
         }
     }
-
+    public void agregarJugador(Jugador jugador){
+        this.jugadores.add(jugador);
+    }
+    
     public int determinarJugador(String textoBoton) {
-        int a = 0;
-        for(int i = 0; i < this.getJugadores().size(); i++){
-            if(textoBoton.equals(this.getJugadores().get(i))){
-                 a = i+1;
-                 break;
-            }
+        char[] a = textoBoton.toCharArray();
+        switch (a[0]){
+            case 49:
+                return 1;
+            case 50:
+                return 2;
+            case 51:
+                return 3;
+            case 52:
+                return 4;
+            case 53:
+                return 5;
+            case 54:
+                return 6;
+            case 55:
+                return 7;
+            case 56:
+                return 8;
+            case 57:
+                return 9;
+            default:
+                return 0;
         }
-        return a;
     }
 
     public int getNumeroJugador(Jugador jugador) {

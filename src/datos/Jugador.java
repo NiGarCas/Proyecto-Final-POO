@@ -35,7 +35,7 @@ public class Jugador {
         this.equipos = new ArrayList();
         this.letrasDisponibles = new Letra[15];
         this.letrasRespuesta = new ArrayList();
-//        this.crearLetrasDisponibles();
+        this.crearLetrasDisponibles(this.nombre);
         this.intentos = intentos;
         this.pais = pais;
         this.posicion = posicion;
@@ -114,5 +114,31 @@ public class Jugador {
     public void agregarEquipo(Equipo equipo){
         this.equipos.add(equipo);
         this.ultimoEquipo = equipo.getNombre();
+    }
+
+    private void crearLetrasDisponibles(String nombre) {
+        char[] arreglo = nombre.toCharArray();
+        System.out.println("NUM: " + arreglo.length);
+        Letra[] letras = new Letra[15];
+        int numero;
+        int i = 0;
+        while (i < arreglo.length){
+            numero = ((int) (Math.random() * 14));
+            if(letras[numero] == null){
+                letras[numero] = new Letra(false,arreglo[i]);
+                i++;
+            }   
+        }
+        for(int k = 0;k<15;k++){
+            if(letras[k] == null){
+            numero = ((int) (Math.random() * 25)+65);
+            char a = (char) numero;
+            letras[k] = new Letra(false,a);
+            }
+        }
+        for (Letra l : letras){
+        System.out.println(l.getLetra());
+        }
+        this.letrasDisponibles = letras;
     }
 }
