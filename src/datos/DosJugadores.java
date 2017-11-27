@@ -10,5 +10,15 @@ package datos;
  * @author nicol
  */
 public class DosJugadores {
-    
+    private int modo;
+    private Jugador jugador_actual;
+    private int ronda;
+    private Servidor servidor;
+    private Cliente cliente;
+    private int puntuacion;
+
+    public DosJugadores() {
+        this.ronda = 0;
+        this.puntuacion = 0;
+    }
 }

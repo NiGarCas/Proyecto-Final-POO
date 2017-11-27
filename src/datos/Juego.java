@@ -6,6 +6,7 @@
 package datos;
 
 import java.util.ArrayList;
+import logica.LogicaAEF;
 import visualizacion.Ventana;
 
 /**
@@ -20,6 +21,7 @@ public class Juego {
     private Ventana ventana;
     private boolean pudoRestar;
     private ArrayList<Equipo> equipos;
+    private LogicaAEF logica;
 
     public Juego(String nombre,int monedas, UnJugador unJugador, DosJugadores dosJugadores) {
         this.monedas = monedas;
@@ -57,6 +59,10 @@ public class Juego {
         return equipos;
     }
 
+    public LogicaAEF getLogica() {
+        return logica;
+    }
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -71,6 +77,10 @@ public class Juego {
 
     public void setPudoRestar(boolean pudoRestar) {
         this.pudoRestar = pudoRestar;
+    }
+
+    public void setLogica(LogicaAEF logica) {
+        this.logica = logica;
     }
     
     public boolean restarMonedas(int i) {

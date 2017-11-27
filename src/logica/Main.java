@@ -9,6 +9,7 @@ import datos.DosJugadores;
 import datos.Equipo;
 import datos.Juego;
 import datos.UnJugador;
+import javax.swing.JOptionPane;
 import visualizacion.Ventana;
 
 /**
@@ -21,7 +22,6 @@ public class Main {
         logica.cargarInfoBasica("datosBasicos.txt");
         logica.cargarEquipos("equipos.txt");
         logica.cargarNiveles("pruebaJug.txt");
-        UnJugador unJugador = new UnJugador(0);
         Ventana ventana = new Ventana(logica.getJuego());
         ventana.setVisible(true);
     }

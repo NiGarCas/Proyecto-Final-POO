@@ -12,6 +12,7 @@ import java.awt.Image;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -41,6 +42,8 @@ public class PanelMenuPrincipal extends Panel{
         String textoBoton = source.getText();
         switch(textoBoton){
             case "SALIR":
+                this.getVentana().getJuego().getLogica().guardarDatos("datosBasicos.txt", "escritura.txt");
+                JOptionPane.showMessageDialog(this.getVentana(), "Datos guardados exitosamente");
                 this.getVentana().dispose();
                 break;
             case "UN JUGADOR":

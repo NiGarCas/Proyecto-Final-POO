@@ -7,7 +7,6 @@ package visualizacion;
 
 import datos.Jugador;
 import datos.Letra;
-import datos.Nivel;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -19,10 +18,9 @@ import javax.swing.JLabel;
  *
  * @author nicol
  */
-public class PanelJugador extends Panel{
-    
+public class PanelJugadorRonda extends Panel{
     private Jugador jugador;
-    public PanelJugador(Ventana Ventana) {
+    public PanelJugadorRonda(Ventana Ventana) {
         super(Ventana);
         
     }
@@ -70,11 +68,6 @@ public class PanelJugador extends Panel{
                         boolean gano = this.jugador.verificar();
                         jugador.setAdivinado(gano);
                         if(gano){
-                            this.getVentana().getJuego().getUnJugador().setTotalAdivinados(this.getVentana().getJuego().getUnJugador().getTotalAdivinados() + 1);
-                            this.getVentana().getJuego().getUnJugador().getNivelActual().setJugadoresAdivinados(this.getVentana().getJuego().getUnJugador().getNivelActual().getJugadoresAdivinados() + 1);
-                            for(Nivel nivel : this.getVentana().getJuego().getUnJugador().getNiveles()){
-                                nivel.setRestantesParaDesbloquear(nivel.getRestantesParaDesbloquear() - 1);
-                            }
                             this.getVentana().getJuego().setMonedas(this.getVentana().getJuego().getMonedas() + jugador.determinarMonedas(jugador.getIntentos()));
                         }
                     }
@@ -363,5 +356,4 @@ public class PanelJugador extends Panel{
         tecla.addActionListener(this);
         this.add(tecla);
     }
-    
 }

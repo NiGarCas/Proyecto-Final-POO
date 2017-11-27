@@ -13,6 +13,7 @@ import datos.Nivel;
 import datos.UnJugador;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.Scanner;
 
 /**
@@ -48,8 +49,10 @@ public class LogicaAEF {
                    UnJugador unJugador = new UnJugador(adivinados);
                    DosJugadores dosJugadores = new DosJugadores();
                    Juego juego = new Juego(nombre,monedas,unJugador,dosJugadores);
+                   juego.setLogica(this);
                    this.setJuego(juego);
                 }
+               flujoEntrada.close();
             }catch(FileNotFoundException e){}
        }
     }
@@ -65,6 +68,7 @@ public class LogicaAEF {
                    String camiseta = flujoEntrada.next().trim();
                    this.juego.getEquipos().add(new Equipo(nombre,camiseta));
                 }
+               flujoEntrada.close();
             }catch(FileNotFoundException e){}
        }
     }
@@ -116,10 +120,52 @@ public class LogicaAEF {
                            }
                    
                }
+               flujoEntrada.close();
            } catch (FileNotFoundException ex) {
                System.out.println("Archivo de datos no Encontrado");
            }
           
+       }
+    }
+    public void guardarDatos(String archivo1,String archivo2){
+        File escritura1 = new File(archivo1);
+        File escritura2 = new File(archivo2);
+        PrintStream flujo1 = null;
+        PrintStream flujo2 = null;
+        if(escritura1.exists()){
+           try {
+               flujo1 = new PrintStream(escritura1);
+               flujo1.print(this.juego.getNombre()+",");
+               flujo1.print(this.juego.getMonedas()+",");
+               flujo1.print(this.juego.getUnJugador().getTotalAdivinados()+",");
+               flujo1.close();
+            }catch(FileNotFoundException e){}
+       }
+        if(escritura2.exists()){
+           try {
+               flujo2 = new PrintStream(escritura2);
+               for(Nivel nivel : this.juego.getUnJugador().getNiveles()){
+                   flujo2.print("N,");
+                   flujo2.print(nivel.getNumero()+",");
+                   flujo2.print(nivel.getJugadoresAdivinados()+",");
+                   flujo2.print(nivel.getRestantesParaDesbloquear()+",");
+                   for(Jugador jugador : nivel.getJugadores()){
+                       flujo2.print("J,");
+                       flujo2.print(jugador.getNombre()+",");
+                       if(jugador.isAdivinado()){
+                           flujo2.print("1,");
+                       }else{
+                           flujo2.print("0,");
+                       }
+                       flujo2.print(jugador.getIntentos()+",");
+                       flujo2.print(jugador.getPais()+",");
+                       flujo2.print(jugador.getPosicion()+",");
+                       for(Equipo equipo : jugador.getEquipos()){
+                           flujo2.print(equipo.getNombre()+",");
+                       }
+                   }
+               }
+            }catch(FileNotFoundException e){}
        }
     }
 }

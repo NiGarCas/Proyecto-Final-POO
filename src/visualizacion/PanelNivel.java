@@ -91,7 +91,7 @@ public class PanelNivel extends Panel{
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
-            bJugador.setFont(this.getFont());
+            bJugador.setFont(this.getFont().deriveFont(0, 12));
             bJugador.setBounds(50+(i*147), 170, 120, 35);
             bJugador.setLocation(50+(i*147), 170);
             bJugador.addActionListener(this);
@@ -117,7 +117,7 @@ public class PanelNivel extends Panel{
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
-            bJugador.setFont(this.getFont());
+            bJugador.setFont(this.getFont().deriveFont(0, 12));
             bJugador.setBounds(50+((i-5)*147), 224, 120, 35);
             bJugador.setLocation(50+((i-5)*147), 224);
             bJugador.addActionListener(this);
@@ -135,7 +135,7 @@ public class PanelNivel extends Panel{
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
-            bJugador.setFont(this.getFont());
+            bJugador.setFont(this.getFont().deriveFont(0, 12));
             bJugador.setBounds(50+((i-10)*147), 278, 120, 35);
             bJugador.setLocation(50+((i-10)*147), 278);
             bJugador.addActionListener(this);
@@ -153,7 +153,7 @@ public class PanelNivel extends Panel{
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
-            bJugador.setFont(this.getFont());
+            bJugador.setFont(this.getFont().deriveFont(0, 12));
             bJugador.setBounds(50+((i-15)*147), 332, 120, 35);
             bJugador.setLocation(50+((i-15)*147), 332);
             bJugador.addActionListener(this);
@@ -171,7 +171,7 @@ public class PanelNivel extends Panel{
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
-            bJugador.setFont(this.getFont());
+            bJugador.setFont(this.getFont().deriveFont(0, 12));
             bJugador.setBounds(50+((i-20)*147), 386, 120, 35);
             bJugador.setLocation(50+((i-20)*147), 386);
             bJugador.addActionListener(this);
@@ -189,7 +189,7 @@ public class PanelNivel extends Panel{
                 bJugador.setBackground(this.getVerdeOscuro());
                 bJugador.setForeground(this.getVerdeClaro());
             }
-            bJugador.setFont(this.getFont());
+            bJugador.setFont(this.getFont().deriveFont(0, 12));
             bJugador.setBounds(50+((i-25)*147), 440, 120, 35);
             bJugador.setLocation(50+((i-25)*147), 440);
             bJugador.addActionListener(this);
