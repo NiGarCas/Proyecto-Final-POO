@@ -10,28 +10,28 @@ package datos;
  * @author nicol
  */
 public class Letra {
-    private boolean escogida;
     private char letra;
+    private boolean escogida;
 
-    public Letra(boolean escogida, char letra) {
-        this.escogida = escogida;
+    public Letra(boolean escogida,char letra) {
         this.letra = letra;
-    }
-
-    public boolean isEscogida() {
-        return escogida;
+        this.escogida = escogida;
     }
 
     public char getLetra() {
         return letra;
     }
 
-    public void setEscogida(boolean escogida) {
-        this.escogida = escogida;
+    public boolean isEscogida() {
+        return escogida;
     }
 
     public void setLetra(char letra) {
         this.letra = letra;
+    }
+
+    public void setEscogida(boolean escogida) {
+        this.escogida = escogida;
     }
     
 }

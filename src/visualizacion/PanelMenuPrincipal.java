@@ -5,11 +5,16 @@
  */
 package visualizacion;
 
+import datos.Cliente;
+import datos.Servidor;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -50,10 +55,28 @@ public class PanelMenuPrincipal extends Panel{
                 this.getVentana().actualizarPanel(1);
                 break;
             case "DOS JUGADORES":
-                this.getVentana().actualizarPanel(2);
+                String name = JOptionPane.showInputDialog(this.getVentana(), "Escriba el nombre que desea tener durante la partida:");
+                this.getVentana().getJuego().setNombre(name);
+                int b = JOptionPane.showConfirmDialog(this.getVentana(), "¿Desea asumir el rol de servidor?");
+                if(b == JOptionPane.YES_OPTION){
+            try {
+                this.getVentana().getJuego().getDosJugadores().setModo(1);
+                this.getVentana().getJuego().getDosJugadores().setServidor(new Servidor(name));
+                
+            } catch (IOException ex) {}
+                }else{
+                    this.getVentana().getJuego().getDosJugadores().setModo(2);
+                    this.getVentana().getJuego().getDosJugadores().setCliente(new Cliente(name));
+                }
+                this.getVentana().getJuego().getDosJugadores().empezarPartida();
+                this.getVentana().actualizarPanel(6);
+                
                 break;
             case "COMPRAR MONEDAS":
-                this.getVentana().getJuego().setMonedas(this.getVentana().getJuego().getMonedas() + 1);
+                
+                int m = Integer.parseInt(JOptionPane.showInputDialog(this.getVentana(), "Ingrese numero de monedas que desea comprar. Cada una cuesta 0.04 USD: "));
+                JOptionPane.showMessageDialog(this.getVentana(), "*Redireccionando al pago con tarjeta");
+                this.getVentana().getJuego().setMonedas(this.getVentana().getJuego().getMonedas() + m);
                 this.repaint();
                 break;
         }

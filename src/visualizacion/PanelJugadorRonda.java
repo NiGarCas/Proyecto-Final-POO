@@ -27,7 +27,7 @@ public class PanelJugadorRonda extends Panel{
     
     @Override
     public void paintComponent(Graphics g){
-        this.jugador = this.getVentana().getJuego().getUnJugador().getJugador_Actual();
+        this.jugador = this.getVentana().getJuego().getDosJugadores().getRonda_actual().getJugador();
         this.setLayout(null);
         super.paintComponent(g);
         Image fondo = loadImage("Fondo.png");
@@ -225,7 +225,7 @@ public class PanelJugadorRonda extends Panel{
     }
 
     private void agregarCamisetas(Graphics g) {
-        this.jugador = this.getVentana().getJuego().getUnJugador().getJugador_Actual();
+        this.jugador = this.getVentana().getJuego().getDosJugadores().getJugador_actual();
         int cantidad = this.jugador.getEquipos().size();
         switch(cantidad){
             case 1:

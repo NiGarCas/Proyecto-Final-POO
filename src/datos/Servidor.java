@@ -5,10 +5,32 @@
  */
 package datos;
 
+import java.io.IOException;
+import java.net.ServerSocket;
+
 /**
  *
  * @author nicol
  */
-public class Servidor {
+public class Servidor{
+    private ServerSocket server;
+    private String nombre;
+
+    public Servidor(String nombre) throws IOException {
+        this.nombre = nombre;
+        this.server = new ServerSocket(8000);
+    }
+
+    public ServerSocket getServer() {
+        return server;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setServer(ServerSocket server) {
+        this.server = server;
+    }
     
 }

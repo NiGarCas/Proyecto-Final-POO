@@ -126,7 +126,6 @@ public class PanelJugador extends Panel{
         siguiente.addActionListener(this);
         this.add(siguiente);
         this.agregarCamisetas(g);
-        System.out.println("adivinado: "+ jugador.isAdivinado());
         if(jugador.isAdivinado() && (jugador.getNombre().toCharArray().length == jugador.getLetrasRespuesta().size())){
             JLabel correcto = new JLabel("¡CORRECTO!");
             correcto.setFont(this.getFont().deriveFont(0,25));

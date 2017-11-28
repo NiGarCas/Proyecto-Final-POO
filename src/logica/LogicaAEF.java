@@ -49,6 +49,7 @@ public class LogicaAEF {
                    UnJugador unJugador = new UnJugador(adivinados);
                    DosJugadores dosJugadores = new DosJugadores();
                    Juego juego = new Juego(nombre,monedas,unJugador,dosJugadores);
+                   dosJugadores.setJuego(juego);
                    juego.setLogica(this);
                    this.setJuego(juego);
                 }
