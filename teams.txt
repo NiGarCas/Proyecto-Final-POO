@@ -1,3 +1,6 @@
+EQUIPO1,EJ1.png,
+EQUIPO2,EJ2.png,
+EQUIPO3,EJ3.png,
 COLONIA,liso_blanco_rojo.png,
 BAYERN MUNICH,liso_rojo_blanco.png,
 ARSENAL,mangas_rojo_blanco.png,

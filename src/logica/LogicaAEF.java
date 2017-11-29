@@ -82,7 +82,8 @@ public class LogicaAEF {
                flujoEntrada = new Scanner(lectura);
                flujoEntrada.useDelimiter(",");
                String prox  = flujoEntrada.next().trim();
-               System.out.println(prox);
+               String n = prox;
+               System.out.println(n);
                while(flujoEntrada.hasNext()){
                    System.out.println(prox.equals("N"));
                    while(prox.equals("N")) {
@@ -111,6 +112,7 @@ public class LogicaAEF {
                                    prox = flujoEntrada.next().trim();
                                    while ((!(prox.equals("N")))&&(!(prox.equals("J")))){
                                        String equipo = prox;
+                                       System.out.println(equipo);
                                        Equipo eq = this.juego.determinarEquipo(equipo);
                                        jugador.agregarEquipo(eq);
                                        if(flujoEntrada.hasNext()){
