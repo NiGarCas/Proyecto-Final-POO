@@ -5,6 +5,7 @@
  */
 package visualizacion;
 
+import datos.Hilo;
 import datos.Jugador;
 import datos.Letra;
 import java.awt.Color;
@@ -13,6 +14,7 @@ import java.awt.Image;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.Timer;
 
 /**
  *
@@ -21,6 +23,7 @@ import javax.swing.JLabel;
 public class PanelJugadorRonda extends Panel{
     private Jugador jugador;
     private int ronda;
+    private Timer timer;
     public PanelJugadorRonda(Ventana Ventana) {
         super(Ventana);
         
@@ -35,6 +38,10 @@ public class PanelJugadorRonda extends Panel{
         Image fondo = loadImage("Fondo.png");
         g.drawImage(fondo, 0, 0, this);
         this.agregarComponentes(g);
+        Thread proceso = new Thread(new Hilo(this.getVentana().getJuego().getDosJugadores()));
+            proceso.start();
+            this.timer = new Timer(50, this);
+            this.timer.start();
     }
     
     @Override
@@ -50,11 +57,13 @@ public class PanelJugadorRonda extends Panel{
                 if(source.getBackground().equals(this.getVerdeMedio())){
                     this.jugador.getLetrasRespuesta().add(new Letra(false,textoBoton.toCharArray()[0]));
                     if(jugador.getNombre().toCharArray().length == jugador.getLetrasRespuesta().size()){
-                        jugador.setIntentos(jugador.getIntentos()+1);
                         boolean gano = this.jugador.verificar();
                         jugador.setAdivinado(gano);
                         if(gano){
-                            this.getVentana().getJuego().setMonedas(this.getVentana().getJuego().getMonedas() + jugador.determinarMonedas(jugador.getIntentos()));
+                            this.getVentana().getJuego().getDosJugadores().getRonda_actual().setGanador(this.getVentana().getJuego().getNombre());
+                            this.getVentana().getJuego().setMonedas(this.getVentana().getJuego().getMonedas() + 1);
+                            this.getVentana().getJuego().getDosJugadores().setPuntuacion(this.getVentana().getJuego().getDosJugadores().getPuntuacion() + 1);
+                            this.getVentana().getJuego().getDosJugadores().getEscritura().println(this.getVentana().getJuego().getNombre());
                         }
                     }
                     this.repaint();
@@ -66,13 +75,11 @@ public class PanelJugadorRonda extends Panel{
     @Override
     public void agregarComponentes(Graphics g) {
         this.removeAll();
-        JButton pistas = new JButton("RONDA" + this.ronda);
-        pistas.setFont(this.getFont());
-        pistas.setBounds(50, 30, 200, 35);
+        JLabel pistas = new JLabel("RONDA " + this.ronda);
+        pistas.setFont(this.getFont().deriveFont(0,50));
+        pistas.setBounds(50, 30, 200, 55);
         pistas.setLocation(50, 30);
-        pistas.setBackground(this.getVerdeOscuro());
-        pistas.setForeground(this.getVerdeClaro());
-        pistas.addActionListener(this);
+        pistas.setForeground(Color.WHITE);
         this.add(pistas);
         JButton atras = new JButton("ATRÁS");
         atras.setFont(this.getFont());
@@ -84,24 +91,12 @@ public class PanelJugadorRonda extends Panel{
         this.add(atras);
         this.agregarCamisetas(g);
         if(jugador.isAdivinado() && (jugador.getNombre().toCharArray().length == jugador.getLetrasRespuesta().size())){
-            JLabel correcto = new JLabel("¡CORRECTO!");
-            correcto.setFont(this.getFont().deriveFont(0,25));
-            correcto.setBounds(330, 300, 200, 50);
-            correcto.setLocation(330, 300);
-            correcto.setForeground(Color.WHITE);
-            this.add(correcto);
             JLabel name = new JLabel(jugador.getNombre());
             name.setFont(this.getFont().deriveFont(0,35));
             name.setBounds(350, 325, 400, 50);
             name.setLocation(350, 325);
             name.setForeground(this.getVerdeClaro());
             this.add(name);
-            JLabel inten = new JLabel("ADININADO AL INTENTO " + jugador.getIntentos());
-            inten.setFont(this.getFont().deriveFont(0,20));
-            inten.setBounds(285, 350, 400, 50);
-            inten.setLocation(285, 350);
-            inten.setForeground(Color.WHITE);
-            this.add(inten);
             JLabel mon = new JLabel("+" + jugador.determinarMonedas(jugador.getIntentos()) + " MONEDAS");
             mon.setFont(this.getFont().deriveFont(0,20));
             mon.setBounds(340, 375, 500, 50);
