@@ -4,26 +4,26 @@ ARSENAL,mangas_rojo_blanco.png,
 INTER DE MILAN,internazionale.png,
 GALATASARAY,galatasaray.png,
 PESCARA,verticales_celeste_blanco.png,
-PSG,psg.png
+PSG,psg.png,
 REAL ZARAGOZA,liso_blanco_azul.png,
 ATHLETIC CLUB,soton.png,
 MANCHESTER UNITED,liso_rojo_blanco.png,
 VISSEL KOBE,vissel.png,
 JUVENTUS,juventus.png,
 EMPOLI,liso_azul_blanco.png,
-PARMA,parma.png
+PARMA,parma.png,
 TORONTO,liso_rojo_negro.png,
 CREWE ALEXANDRA,liso_rojo_blanco.png,
 SHREWSBURTY TOWN,verticales_azul_amarillo.png,
 READING,qpr.png,
-HOFFENHEIM,hoffenheim.png
+HOFFENHEIM,hoffenheim.png,
 SWANSEA CITY,blanco.png,
 TOTTENHAM HOTSPUR,tottenham.png,
 EVERTON,liso_azul_blanco.png,
 NEWCASTLE UNITED,juventus.png,
 PRESTON NORTH END,tottenham.png,
 LIVERPOOL,liso_rojo_blanco.png,
-WEST HAM UNITED,west_ham.png
+WEST HAM UNITED,west_ham.png,
 SCHALKE 04,liso_azul_blanco.png,
 WOLFSBURGO,wolfsburg.png,
 ESTRELLA  ROJA,verticales_rojo_blanco.png,
@@ -42,287 +42,287 @@ NEW YORK CITY,city.png,
 EMELEC,emelec.png,
 PACHUCA,verticales_azul_blanco.png,
 TIGRES UANL,uanl.png,
-STRASBOURG
-SEVILLA
-NAGOYA GRAMPUS
-VVV VENLO
-SOUTHAMPTON
-RAYO VALLECANO
-REAL MADRID
-ALMERIA
-MANCHESTER CITY
-MIDDLEBROUGH
-MALAGA
-UD LAS PALMAS
-RUBIN KAZAN
-ZENIT SAN PETERSBURGO
-WEST BROMWICH ALBION
-GETAFE
-ROMA
-BRESCIA
-PISA
-ATALANTA
-TORINO
-WATFORD
-BASTIA
-CHARLTON ATHLETIC
-NACIONAL MG
-CRUZEIRO
-MAINZ 05
-BAYER LEVERKUSEN
-CHELSEA
-BORUSSIA DORTMUND
-AC MILAN
-LIBOURNE
-GENOVA
-DINAMO DE MOSCU
-OLYMPIQUE DE LYON
-IPSWICH TOWN
-RACING SANTANDER
-MALLORCA
-VILLAREAL
-LA GALAXY
-ASTON VILLA
-DINAMO ZAGREB
-SHANGHAI
-ATLETICO NACIONAL
-NIZA
-AJAX
-EQUIDAD
-SPORTING DE LISBOA
-PSV
-PORSTMOUTH
-SUNDERLAND
-AFC BOURNEMOUTH
-IFK HASSLEHOLM
-NORWICH CITY
-STOKE CITY
-MONACO
-SPARTA PRAHA
-SINT TRUIDEN
-VITESSE
-METZ
-BOLTON WANDERERS
-SAO PAULO
-PORTO
-LIVORNO
-CRYSTAL PALACE
-WIGAN ATHLETIC
-INDEPENDIENTE MEDELLIN
-UDINESE
-LECCE
-UNIVERSIDAD DE CHILE
-CELTA DE VIGO
-HEARTS
-VASCO DE GAMA
-GROSSETO
-PALERMO
-CAGLIARI
-TOULOUSE
-KUBAN KRASNODAR
-KAIRAT
-CHIAPAS
-GUANGZHOU EVERGRANDE
-HEEREENVEEN
-CELTIC
-AL HILAL
-ELCHE
-CEREZO OSAKA
-LEEDS UNITED
-KAWASAKI FRONTALE
-VITORIA
-CONSADOLE SAPPORE
-TOKYO VERDY
-REAL BETIS
-UNIVERSITARIO
-COLON
-CATANIA
-FEYENOORD
-LILLE
-HERTHA BSC
-JIANGSU SUNING
-GRENOBLE
-GRANADA
-SAMPDORIA
-DEPORTIVO CALI
-SHEFFIELD UNITED
-FENERBAHCE
-TRENCIN
-GIRONDINS DE BURDEUS
-FULHAM
-ANDERLETCH
-MODENA
-PUMAS UNAM
-AZ ALKMAAR
-ESPANYOL
-DOMZALE
-TREVISO
-LAZIO
-RIMINI
-CHICAGO FIRE
-BIDVEST WITS
-STANDARD DE LIEJA
-PARTIZAN
-SAINT ETIENNE
-TROYES
-UNIVERSIDAD DE GUADALAJARA
-GUADALAJARA
-CRUZ AZUL
-EINTRACHT FRANKFURT
-KAISERSLAUTERN
-CADIZ
-FC TWENTE
-WERDER BREMEN
-STIRLING ALBION
-BURNLEY
-BARNSLEY
-ALIANZA LIMA
-AL JAZIRA
-LOKOMOTIV DE MOSCU
-INDEPENDIENTE DEL VALLE
-LEVANTE
-MORELIA
-AL ITTIHAD
-BOLONIA
-BASILEA
-ATLAS
-DEPORTIVO LA CORUÑA
-SHAKTAR DONETSK
-QUEENS PARK RANGERS
-HALIFAX TOWN
-LEICESTER CITY
-FLEETWOOD TOWN
-NEC NIMEGA
-GENT
-BIRMINGHAM CITY
-TOKYO
-CESENA
-BARRANQUILLA
-JUNIOR
-BRUJAS
-ATLETICO DE MINEIRO
-NAPOLI
-SHIMIZU S PULSE
-SALAMANCA
-OSASUNA
-REAL SOCIEDAD
-SWINDON TOWN
-GREMIO
-COBRELOA
-SHEFFIELD
-SPORTING BRAGA
-ALBACETE
-PENAFIEL
-REAL VALLADOLID
-ROBUR SIERRA
-NANTES
-HEERENVEEN
-YOUNG BOYS
-COLO COLO
-PALMEIRAS
-AL AIN
-AL WAHDA
-OLYMPIAKOS
-PANIONIOS
-ATROMITOS
-BORUSSIA MGLADBACH
-CROTONE
-RIVER PLATE
-PYUNIK
-METALURH DONETSK
-MOSKVA
-CHIEVO VERONA
-SHANDONG LUNENG
-JUAN AURICH
-SPORTING CRISTAL
-PONTE PRETA
-NEWELLS OLD BOYS
-LOBOS BUAP
-SANTA FE
-MONTERREY
-HAPOEL TEL AVIV
-KOSICE
-AUDAX ITALIANO
-BLACKBURN ROVERS
-VALENCIENNES
-FIGUEIRENSE
-CANNES
-RIO AVE
-FALKIRK
-RECREATIVO DE HUELVA
-AMERICA
-AL GHAFARA
-NOTTINGHAM FOREST
-HURACAN
-MILLONARIOS
-SEATTLE SOUNDERS
-MONTPELLIER
-UNION MAGADALENA
-MANTOVA FC
-UNION HUARAL
- UNIVERSITARIO DE DEPORTES
-CLUB BOLIVAR
-BUDAPESTI  HONVED
-NEW YORK COSMOS
-HAMBURGER SV
-AL ARABI
-LOS ANGELES AZTECS
-HIBERNIAN FC
-BRISBANE LIONS
-FORD LUADERDALE STRIKERS
-TSV 1861 NORDLINGEN
-LASK LINZ 
-DALLAS BURN
-ATLETICO CELAYA
-SAN DIEGO SOCKERS
-COBRESAL
-COBREANDINO
-WASHINGTON DIPLOMATS
-USM CASABLANCA
-DINAMO MOSCU
-ROSARIO CENTRAL
-HERCULES
-KREMSER SC
-PELITA JAYA FC
-SANTOS
-CORINTHIANS
-FC BASEL
-ANZHI MAKHACHKLA
-HFC HAARLEM
-AS 
-MIAMI SHARKS
-CLUB NACIONAL
-GRONINGEN
-INDEPENDIENTE
-FLUMINENSE
-LANCEROS BOYACA
-RENNES
-ENVIGADO
-BANFIELD
-SAPRISSA
-ALBACETE
-SLOVAN
-INTERNACIONAL
-ZAGREB
-ISTRES
-TOURS
-AUDAX SAO PAULO
-BRAGANTINO
-OLYMPIQUE ALES
-BREST
-TRANMERE ROVERS
-BLACKPOOL
-ROT WEISS AHLEN
-LE HAVRE
-RENTISTAS
-DIJON FCO
-ASEC
-BEVEREN
-HANNOVER 96
-GIMNASTIC DE TARRAGONA
-TIANJIN QUANJIAN
-METROSTARS
-MANISASPOR
-UNIVERSIDAD CATOLICA
-JUVENTUDE
-AJACCIO
+STRASBOURG,strasbourg.png,
+SEVILLA,liso_blanco_rojo.png,
+NAGOYA GRAMPUS,nagoya.png,
+VVV VENLO,liso_amarillo_negro.png,
+SOUTHAMPTON,soton.png,
+RAYO VALLECANO,rayo.png,
+REAL MADRID,blanco.png,
+ALMERIA,verticales_rojo_blanco.png,
+MANCHESTER CITY,city.png,
+MIDDLEBROUGH,liso_rojo_blanco.png,
+MALAGA,verticales_celeste_blanco.png,
+UD LAS PALMAS,las_palmas.png,
+RUBIN KAZAN,rubin.png,
+ZENIT SAN PETERSBURGO,city.png,
+WEST BROMWICH ALBION,westbrom.png,
+GETAFE,liso_azul_blanco.png,
+ROMA,roma.png,
+BRESCIA,brescia.png,
+PISA,pisa.png,
+ATALANTA,internazionale.png,
+TORINO,rubin.png,
+WATFORD,watford.png,
+BASTIA,liso_azul_blanco.png,
+CHARLTON ATHLETIC,liso_rojo_blanco.png,
+NACIONAL MG,verticales_rojo_blanco.png,
+CRUZEIRO,liso_azul_blanco.png,
+MAINZ 05,liso_rojo_blanco.png,
+BAYER LEVERKUSEN,leverkusen.png,
+CHELSEA,liso_azul_blanco.png,
+BORUSSIA DORTMUND,liso_amarillo_negro.png,
+AC MILAN,milan.png,
+LIBOURNE,liso_azul_blanco.png,
+GENOVA,genoa.png,
+DINAMO DE MOSCU,liso_azul_blanco.png,
+OLYMPIQUE DE LYON,lyon.png,
+IPSWICH TOWN,liso_azul_blanco.png,
+RACING SANTANDER,racing_santander.png,
+MALLORCA,liso_rojo_negro.png,
+VILLAREAL,las_palmas.png,
+LA GALAXY,la_galaxy.png,
+ASTON VILLA,west_ham.png,
+DINAMO ZAGREB,liso_azul_blanco.png,
+SHANGHAI,shangai.png,
+ATLETICO NACIONAL,betis.png,
+NIZA,milan.png,
+AJAX,ajax.png,
+EQUIDAD,equidad.png,
+SPORTING DE LISBOA,lisboa.png,
+PSV,soton.png,
+PORSTMOUTH,liso_azul_blanco.png,
+SUNDERLAND,soton.png,
+AFC BOURNEMOUTH,milan.png,
+IFK HASSLEHOLM,verticales_negro_amarillo.png,
+NORWICH CITY,norwich.png,
+STOKE CITY,verticales_rojo_blanco.png,
+MONACO,monaco.png,
+SPARTA PRAHA,rubin.png,
+SINT TRUIDEN,las_palmas.png,
+VITESSE,verticales_negro_amarillo.png,
+METZ,rubin.png,
+BOLTON WANDERERS,bolton.png,
+SAO PAULO,sao_paulo.png,
+PORTO,verticales_azul_blanco.png,
+LIVORNO,rubin.png,
+CRYSTAL PALACE,crystal.png,
+WIGAN ATHLETIC,verticales_azul_blanco.png,
+INDEPENDIENTE MEDELLIN,dim.png,
+UDINESE,juventus.png,
+LECCE,lecce.png,
+UNIVERSIDAD DE CHILE,liso_azul_blanco.png,
+CELTA DE VIGO,celta.png,
+HEARTS,rubin.png,
+VASCO DE GAMA,vasco.png,
+GROSSETO,grosseto.png,
+PALERMO,palermo.png,
+CAGLIARI,genoa.png,
+TOULOUSE,toulouse.png,
+KUBAN KRASNODAR,krasnodar.png,
+KAIRAT,liso_amarillo_negro.png,
+CHIAPAS,eequidad.png,
+GUANGZHOU EVERGRANDE,evergrande.png,
+HEEREENVEEN,herenven.png,
+CELTIC,celtic.png,
+AL HILAL,liso_azul_blanco.png,
+ELCHE,elche.png,
+CEREZO OSAKA,cerezo.png,
+LEEDS UNITED,liso_blanco_azul.png,
+KAWASAKI FRONTALE,pisa.png,
+VITORIA,flamengo.png,
+CONSADOLE SAPPORE,milan.png,
+TOKYO VERDY,verdy.png,
+REAL BETIS,betis.png,
+UNIVERSITARIO,liso_blanco_rojo.png,
+COLON,colon.png,
+CATANIA,catania.png,
+FEYENOORD,feyenoord.png,
+LILLE,dim.png,
+HERTHA BSC,verticales_azul_blanco.png,
+JIANGSU SUNING,suning.png,
+GRENOBLE,verticales_azul_blanco.png,
+GRANADA,granada.png,
+SAMPDORIA,sampdoria.png,
+DEPORTIVO CALI,cali.png,
+SHEFFIELD UNITED,soton.png,
+FENERBAHCE,central.png,
+TRENCIN,liso_blanco_rojo.png,
+GIRONDINS DE BURDEUS,burdeos.png,
+FULHAM,liso_blanco_negro.png,
+ANDERLETCH,fiorentina.png,
+MODENA,las_palmas.png,
+PUMAS UNAM,unam.png,
+AZ ALKMAAR,liso_rojo_blanco.png,
+ESPANYOL,verticales_azul_blanco.png,
+DOMZALE,las_palmas.png,
+TREVISO,marsella.png,
+LAZIO,city.png,
+RIMINI,rimini.png,
+CHICAGO FIRE,chicago.png,
+BIDVEST WITS,tottenham.png,
+STANDARD DE LIEJA,mangas_rojo_blanco.png,
+PARTIZAN,juventus.png,
+SAINT ETIENNE,cali.png,
+TROYES,liso_azul_blanco.png,
+UNIVERSIDAD DE GUADALAJARA,uguadalajara.png,
+GUADALAJARA,chivas.png,
+CRUZ AZUL,liso_azul_blanco.png,
+EINTRACHT FRANKFURT,milan.png,
+KAISERSLAUTERN,rubin.png,
+CADIZ,las_palmas.png,
+FC TWENTE,liso_rojo_blanco.png,
+WERDER BREMEN,equidad.png,
+STIRLING ALBION,liso_rojo_blanco.png,
+BURNLEY,west_ham.png,
+BARNSLEY,liso_rojo_blanco.png,
+ALIANZA LIMA,westbrom.png,
+AL JAZIRA,liso_blanco_negro.png,
+LOKOMOTIV DE MOSCU,lokomotiv.png,
+INDEPENDIENTE DEL VALLE,internazionale.png,
+LEVANTE,crystal.png,
+MORELIA,morelia.png,
+AL ITTIHAD,verticales_negro_amarillo.png,
+BOLONIA,genoa.png,
+BASILEA,basel.png,
+ATLAS,colon.png,
+DEPORTIVO LA CORUÑA,verticales_azul_blanco.png,
+SHAKTAR DONETSK,shaktar.png,
+QUEENS PARK RANGERS,qpr.png,
+HALIFAX TOWN,liso_azul_blanco.png,
+LEICESTER CITY,liso_azul_blanco.png,
+FLEETWOOD TOWN,liso_rojo_blanco.png,
+NEC NIMEGA,nec.png,
+GENT,liso_azul_blanco.png,
+BIRMINGHAM CITY,liso_azul_blanco.png,
+TOKYO,liso_azul_blanco.png,
+CESENA,juventus.png,
+BARRANQUILLA,barranquilla.png,
+JUNIOR,chivas.png,
+BRUJAS,internazionale.png,
+ATLETICO DE MINEIRO,juventus.png,
+NAPOLI,city.png,
+SHIMIZU S PULSE,lshimizu.png,
+SALAMANCA,liso_blanco_negro.png,
+OSASUNA,dim.png,
+REAL SOCIEDAD,verticales_azul_blanco.png,
+SWINDON TOWN,liso_rojo_blanco.png,
+GREMIO,pisa.png,
+COBRELOA,lorient.png,
+SHEFFIELD,verticales_azul_blanco.png,
+SPORTING BRAGA,mangas_rojo_blanco.png,
+ALBACETE,liso_blanco_negro.png,
+PENAFIEL,liso_rojo_negro.png,
+REAL VALLADOLID,toulouse.png,
+ROBUR SIERRA,juventus.png,
+NANTES,norwich.png,
+HEERENVEEN,herenven.png,
+YOUNG BOYS,liso_amarillo_negro.png,
+COLO COLO,liso_blanco_negro.png,
+PALMEIRAS,cali.png,
+AL AIN,fiorentina.png,
+AL WAHDA,rubin.png,
+OLYMPIAKOS,verticales_rojo_blanco.png,
+PANIONIOS,crystal.png,
+ATROMITOS,liso_azul_blanco.png,
+BORUSSIA MGLADBACH,racing_santander.png,
+CROTONE,crotone.png,
+RIVER PLATE,river.png,
+PYUNIK,liso_azul_blanco.png,
+METALURH DONETSK,liso_negro_blanco.png,
+MOSKVA,crystal.png,
+CHIEVO VERONA,chievo.png,
+SHANDONG LUNENG,luneng.png,
+JUAN AURICH,liso_blanco_rojo.png,
+SPORTING CRISTAL,city.png,
+PONTE PRETA,vasco.png,
+NEWELLS OLD BOYS,colon.png,
+LOBOS BUAP,liso_blanco_negro.png,
+SANTA FE,mangas_rojo_blanco.png,
+MONTERREY,westbrom.png,
+HAPOEL TEL AVIV,liso_rojo_blanco.png,
+KOSICE,las_palmas.png,
+AUDAX ITALIANO,liso_azul_blanco.png,
+BLACKBURN ROVERS,blackburn.png,
+VALENCIENNES,liso_rojo_blanco.png,
+FIGUEIRENSE,verticales_rojo_blanco.png,
+CANNES,liso_azul_blanco.png,
+RIO AVE,betis.png,
+FALKIRK,liso_negro_blanco.png,
+RECREATIVO DE HUELVA,verticales_azul_blanco.png,
+AMERICA,liso_rojo_blanco.png,
+AL GHAFARA,chievo.png,
+NOTTINGHAM FOREST,liso_rojo_blanco.png,
+HURACAN,liso_blanco_rojo.png,
+MILLONARIOS,liso_azul_blanco.png,
+SEATTLE SOUNDERS,seattle.png,
+MONTPELLIER,montpellier.png,
+UNION MAGADALENA,crotone.png,
+MANTOVA FC,rayo.png,
+UNION HUARAL,soton.png,
+UNIVERSITARIO DE DEPORTES,liso_blanco_rojo.png,
+CLUB BOLIVAR,bolivar.png,
+BUDAPESTI  HONVED,milan.png,
+NEW YORK COSMOS,cosmos.png,
+HAMBURGER SV,lyon.png,
+AL ARABI,liso_rojo_blanco.png,
+LOS ANGELES AZTECS,aztecs.png,
+HIBERNIAN FC,hibernian.png,
+BRISBANE LIONS,luneng.png,
+FORD LUADERDALE STRIKERS,strikers.png,
+TSV 1861 NORDLINGEN,cali.png,
+LASK LINZ ,juventus.png,
+DALLAS BURN,liso_rojo_negro.png,
+ATLETICO CELAYA,velez.png,
+SAN DIEGO SOCKERS,las_palmas.png,
+COBRESAL,aztecs.png,
+COBREANDINO,cali.png,
+WASHINGTON DIPLOMATS,liso_rojo_blanco.png,
+USM CASABLANCA,milan.png,
+DINAMO MOSCU,liso_blanco_azul.png,
+ROSARIO CENTRAL,central.png,
+HERCULES,verticales_azul_blanco.png,
+KREMSER SC,liso_blanco_nefro.png,
+PELITA JAYA FC,liso_rojo_blanco.png,
+SANTOS,blanco.png,
+CORINTHIANS,liso_blanco_negro.png,
+FC BASEL,lbasel.png,
+ANZHI MAKHACHKLA,norwich.png,
+HFC HAARLEM,haarlem.png,
+AS ,liso_azul_blanco.png,
+MIAMI SHARKS,liso_negro_blanco.png,
+CLUB NACIONAL,lyon.png,
+GRONINGEN,groningen.png,
+INDEPENDIENTE,liso_rojo_blanco.png,
+FLUMINENSE,flu.png,
+LANCEROS BOYACA,barranquilla.png,
+RENNES,liso_rojo_negro.png,
+ENVIGADO,luneng.png,
+BANFIELD,betis.png,
+SAPRISSA,rubin.png,
+ALBACETE,liso_blanco_negro.png,
+SLOVAN,city.png,
+INTERNACIONAL,liso_rojo_blanco.png,
+ZAGREB,liso_azul_blanco.png,
+ISTRES,fiorentina.png,
+TOURS,bolivar.png,
+AUDAX SAO PAULO,liso_rojo_blanco.png,
+BRAGANTINO,juventus.png,
+OLYMPIQUE ALES,liso_azul_blanco.png,
+BREST,liso_rojo_blanco.png,
+TRANMERE ROVERS,liso_blanco_azul.png,
+BLACKPOOL,luneng.png,
+ROT WEISS AHLEN,liso_rojo_blanco.png,
+LE HAVRE,bolivar.png,
+RENTISTAS,liso_rojo_blanco.png,
+DIJON FCO,liso_rojo_negro.png,
+ASEC,liso_amarillo_negro.png,
+BEVEREN,las_palmas.png,
+HANNOVER 96,rubin.png,
+GIMNASTIC DE TARRAGONA,liso_rojo_blanco.png,
+TIANJIN QUANJIAN,liso_rojo_blanco.png,
+METROSTARS,milan.png,
+MANISASPOR,juventus.png,
+UNIVERSIDAD CATOLICA,catolica.png,
+JUVENTUDE,betis.png,
+AJACCIO,verticales_azul_blanco.png,

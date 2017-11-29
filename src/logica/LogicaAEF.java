@@ -66,6 +66,7 @@ public class LogicaAEF {
                flujoEntrada.useDelimiter(",");
                while(flujoEntrada.hasNext()){
                    String nombre = flujoEntrada.next().trim();
+                   System.out.println(nombre);
                    String camiseta = flujoEntrada.next().trim();
                    this.juego.getEquipos().add(new Equipo(nombre,camiseta));
                 }
@@ -81,7 +82,9 @@ public class LogicaAEF {
                flujoEntrada = new Scanner(lectura);
                flujoEntrada.useDelimiter(",");
                String prox  = flujoEntrada.next().trim();
+               System.out.println(prox);
                while(flujoEntrada.hasNext()){
+                   System.out.println(prox.equals("N"));
                    while(prox.equals("N")) {
                                int numero = flujoEntrada.nextInt();
                                int adivinados = flujoEntrada.nextInt();
@@ -93,6 +96,7 @@ public class LogicaAEF {
                                         System.out.println("error lectura jugadores");
                                     }
                                    String nombre = flujoEntrada.next().trim();
+                                   System.out.println(nombre);
                                    boolean p = false;
                                    int ad = flujoEntrada.nextInt();
                                    if(ad == 1){

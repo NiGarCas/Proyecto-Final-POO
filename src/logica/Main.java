@@ -20,8 +20,10 @@ public class Main {
     public static void main(String[] args) {
         LogicaAEF logica = new LogicaAEF();
         logica.cargarInfoBasica("datosBasicos.txt");
-        logica.cargarEquipos("equipos.txt");
-        logica.cargarNiveles("pruebaJug.txt");
+        logica.cargarEquipos("teams.txt");
+        System.out.println("---EQUIPOS CARGADOS---");
+        logica.cargarNiveles("jugadoresinfo.txt");
+        System.out.println("---JUGADORES CARGADOS---");
         Ventana ventana = new Ventana(logica.getJuego());
         ventana.setVisible(true);
     }

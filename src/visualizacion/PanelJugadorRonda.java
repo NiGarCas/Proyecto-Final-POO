@@ -46,6 +46,9 @@ public class PanelJugadorRonda extends Panel{
     
     @Override
     public void actionPerformed(ActionEvent evento) {
+        if(evento.getSource().getClass().getCanonicalName().equals("javax.swing.Timer")){
+            repaint();
+        }else{
         JButton source = (JButton)evento.getSource();
         String textoBoton = source.getText();
         switch(textoBoton){
@@ -69,6 +72,7 @@ public class PanelJugadorRonda extends Panel{
                     this.repaint();
                 }
                 break;
+        }
         }
     }
 
