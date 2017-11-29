@@ -1,3 +1,6 @@
 EQUIPO1,EJ1.png,
 EQUIPO2,EJ2.png,
 EQUIPO3,EJ3.png,
+SPORTING DE LISBOA,lisboa.png,
+MANCHESTER UNITED,liso_rojo_blanco.png,
+REAL MADRID,blanco.png,

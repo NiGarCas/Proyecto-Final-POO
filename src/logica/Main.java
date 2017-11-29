@@ -24,7 +24,7 @@ public class Main {
         System.out.println("---EQUIPOS 1 CARGADOS---");
         logica.cargarEquipos("listadeequipos.txt");
         System.out.println("---EQUIPOS 2 CARGADOS---");
-        logica.cargarNiveles("pruebaJug.txt");
+        logica.cargarNiveles("jugadoresinfo.txt");
         System.out.println("---JUGADORES CARGADOS---");
         Ventana ventana = new Ventana(logica.getJuego());
         ventana.setVisible(true);
