@@ -19,9 +19,6 @@ public class Ronda {
     public Ronda(int numero,DosJugadores dosj) {
         this.dosj = dosj;
         this.numero = numero;
-        int a = (int) (Math.random() * 8);
-        int b = (int) (Math.random() * 29);
-        this.jugador = this.dosj.getJuego().getUnJugador().getNiveles().get(a).getJugadores().get(b);
     }
 
     public DosJugadores getDosj() {
@@ -40,8 +37,8 @@ public class Ronda {
         return ganador;
     }
 
-    public void setJugador(Jugador jugador) {
-        this.jugador = jugador;
+    public void setJugador(int a,int b) {
+        this.jugador = this.dosj.getJuego().getUnJugador().getNiveles().get(a).getJugadores().get(b);
     }
 
     public void setGanador(String ganador) {

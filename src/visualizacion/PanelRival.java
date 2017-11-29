@@ -28,11 +28,18 @@ public class PanelRival extends Panel{
     
     @Override
     public void paintComponent(Graphics g){
+        try {
+            this.getVentana().getJuego().getDosJugadores().setNombreRival(this.getVentana().getJuego().getDosJugadores().getLectura().readLine());
+        } catch (IOException ex) {}
         this.setLayout(null);
         super.paintComponent(g);
         Image fondo = loadImage("Fondo.png");
         g.drawImage(fondo, 0, 0, this);
         this.agregarComponentes(g);
+        try{ 
+            Thread.sleep(2000); 
+        } catch(InterruptedException e ) {}
+        this.getVentana().actualizarPanel(8);
     }
     @Override
     public void actionPerformed(ActionEvent evento) {
@@ -58,37 +65,15 @@ public class PanelRival extends Panel{
         rival.setLocation(80,180);
         rival.setForeground(Color.WHITE);
         this.add(rival);
-        if(this.getVentana().getJuego().getDosJugadores().getModo() == 1){
             JLabel name;
-            try {
-                name = new JLabel(this.getVentana().getJuego().getDosJugadores().getLectura().readLine());
-                name.setFont(this.getFont().deriveFont(0,60));
-                name.setBounds(330, 180, 500, 200);
-                name.setLocation(330,180);
-                name.setForeground(this.getVerdeClaro());
+            name = new JLabel(this.getVentana().getJuego().getDosJugadores().getNombreRival());
+            name.setFont(this.getFont().deriveFont(0,60));
+            name.setBounds(330, 180, 500, 200);
+            name.setLocation(330,180);
+            name.setForeground(this.getVerdeClaro());
             this.add(name);
-            } catch (IOException ex) {
-                System.out.println("error");
-            }
-            
-        }else{
-            JLabel name;
-            try {
-                name = new JLabel(this.getVentana().getJuego().getDosJugadores().getLectura().readLine());
-                name.setFont(this.getFont().deriveFont(0,60));
-                name.setBounds(330, 180, 500, 200);
-                name.setLocation(330,180);
-                name.setForeground(this.getVerdeClaro());
-                this.add(name);
-            } catch (IOException ex) {
-                System.out.println("error");
-            }
-            
         }
-        System.out.println("panel rival");
-        try{ 
-            Thread.sleep(4000); 
-        } catch(InterruptedException e ) {}
-        this.getVentana().actualizarPanel(8);
-    }
+//        System.out.println("panel rival");
+        
+    
 }

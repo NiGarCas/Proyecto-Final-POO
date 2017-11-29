@@ -52,7 +52,6 @@ public class PanelJugador extends Panel{
             case "ANTERIOR  JUGADOR":
                 this.getVentana().getJuego().getUnJugador().anteriorJugador();
                 this.repaint();
-                System.out.println(this.jugador.getNombre());
                 break;
             case "SIGUIENTE  JUGADOR":
                 this.getVentana().getJuego().getUnJugador().siguienteJugador();

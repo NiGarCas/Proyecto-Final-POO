@@ -12,7 +12,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
@@ -22,13 +21,13 @@ import java.net.Socket;
 public class DosJugadores {
     private Juego juego;
     private int modo;
-    private Jugador jugador_actual;
     private Ronda ronda_actual;
     private Ronda[] rondas;
     private Servidor servidor;
     private Cliente cliente;
     private int puntuacion;
     private boolean hayRival;
+    private String nombreRival;
     private BufferedReader lectura;
     private PrintWriter escritura;
 
@@ -36,10 +35,16 @@ public class DosJugadores {
         this.modo  = 0;
         this.ronda_actual = null;
         this.puntuacion = 0;
-        this.jugador_actual = null;
         this.hayRival = false;
         this.cliente = null;
         this.servidor = null;
+        this.rondas = new Ronda[5];
+        this.rondas[0] = new Ronda(1,this);
+        this.rondas[1] = new Ronda(2,this);
+        this.rondas[2] = new Ronda(3,this);
+        this.rondas[3] = new Ronda(4,this);
+        this.rondas[4] = new Ronda(5,this);
+        this.ronda_actual = this.rondas[0];
     }
 
     public Juego getJuego() {
@@ -48,10 +53,6 @@ public class DosJugadores {
     
     public int getModo() {
         return modo;
-    }
-
-    public Jugador getJugador_actual() {
-        return jugador_actual;
     }
 
     public Ronda getRonda_actual() {
@@ -78,6 +79,10 @@ public class DosJugadores {
         return rondas;
     }
 
+    public String getNombreRival() {
+        return nombreRival;
+    }
+
     public BufferedReader getLectura() {
         return lectura;
     }
@@ -94,9 +99,6 @@ public class DosJugadores {
         this.modo = modo;
     }
 
-    public void setJugador_actual(Jugador jugador_actual) {
-        this.jugador_actual = jugador_actual;
-    }
 
     public void setRonda_actual(Ronda ronda) {
         this.ronda_actual = ronda;
@@ -117,6 +119,11 @@ public class DosJugadores {
     public void setHayRival(boolean hayRival) {
         this.hayRival = hayRival;
     }
+
+    public void setNombreRival(String nombreRival) {
+        this.nombreRival = nombreRival;
+    }
+    
     public void empezarPartida() {
         if(this.getModo() == 2){
             try {
@@ -128,17 +135,25 @@ public class DosJugadores {
                 this.lectura = new BufferedReader(new InputStreamReader(entrada));
                 this.escritura = new PrintWriter(salida,true);
                 escritura.println(this.cliente.getNombre());
+                this.rondas[0].setJugador(0, 6);
+                this.rondas[1].setJugador(4, 3);
+                this.rondas[2].setJugador(3, 21);
+                this.rondas[3].setJugador(2, 1);
+                this.rondas[4].setJugador(1, 17);
             } catch (IOException ex) {System.out.println("error");}
         } else {
             try {
-                Ronda ronda = new Ronda(1,this);
-                this.setRonda_actual(ronda);
                 Socket socket = this.getServidor().getServer().accept();
                 InputStream entrada = socket.getInputStream();
                 OutputStream salida = socket.getOutputStream();
                 this.hayRival = true;
                 this.lectura = new BufferedReader(new InputStreamReader(entrada));
                 this.escritura = new PrintWriter(salida,true);
+                this.rondas[0].setJugador(0, 6);
+                this.rondas[1].setJugador(4, 3);
+                this.rondas[2].setJugador(3, 21);
+                this.rondas[3].setJugador(2, 1);
+                this.rondas[4].setJugador(1, 17);
                 escritura.println(this.servidor.getNombre());
             } catch (IOException ex) {System.out.println("error");}
             

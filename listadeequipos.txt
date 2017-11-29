@@ -1,47 +1,47 @@
-COLONIA
-BAYERN MUNICH
-ARSENAL
-INTER DE MILAN
-GALATASARAY
-PESCARA
-PSG
-REAL ZARAGOZA
-ATHLETIC CLUB
-MANCHESTER UNITED
-VISSEL KOBE
-JUVENTUS
-EMPOLI
-PARMA
-TORONTO
-CREWE ALEXANDRA
-SHREWSBURTY TOWN
-READING
-HOFFENHEIM
-SWANSEA CITY
-TOTTENHAM HOTSPUR
-EVERTON
-NEWCASTLE UNITED
-PRESTON NORTH END
-LIVERPOOL
-WEST HAM UNITED
-SCHALKE 04
-WOLFSBURGO
-ESTRELLA  ROJA
-SPARTAK DE MOSCU
-OLYMPIQUE DE MARSELLA
-LORIENT
-ARLES
-STUTTGART
-FIORENTINA
-BESIKTAS
-BENFICA
-VALENCIA
-BARCELONA
-ATLETICO DE MADRID
-NEW YORK CITY
-EMELEC
-PACHUCA
-TIGRES UANL
+COLONIA,liso_blanco_rojo.png,
+BAYERN MUNICH,liso_rojo_blanco.png,
+ARSENAL,mangas_rojo_blanco.png,
+INTER DE MILAN,internazionale.png,
+GALATASARAY,galatasaray.png,
+PESCARA,verticales_celeste_blanco.png,
+PSG,psg.png
+REAL ZARAGOZA,liso_blanco_azul.png,
+ATHLETIC CLUB,soton.png,
+MANCHESTER UNITED,liso_rojo_blanco.png,
+VISSEL KOBE,vissel.png,
+JUVENTUS,juventus.png,
+EMPOLI,liso_azul_blanco.png,
+PARMA,parma.png
+TORONTO,liso_rojo_negro.png,
+CREWE ALEXANDRA,liso_rojo_blanco.png,
+SHREWSBURTY TOWN,verticales_azul_amarillo.png,
+READING,qpr.png,
+HOFFENHEIM,hoffenheim.png
+SWANSEA CITY,blanco.png,
+TOTTENHAM HOTSPUR,tottenham.png,
+EVERTON,liso_azul_blanco.png,
+NEWCASTLE UNITED,juventus.png,
+PRESTON NORTH END,tottenham.png,
+LIVERPOOL,liso_rojo_blanco.png,
+WEST HAM UNITED,west_ham.png
+SCHALKE 04,liso_azul_blanco.png,
+WOLFSBURGO,wolfsburg.png,
+ESTRELLA  ROJA,verticales_rojo_blanco.png,
+SPARTAK DE MOSCU,spartak.png,
+OLYMPIQUE DE MARSELLA,marsella.png,
+LORIENT,lorient.png,
+ARLES,arles.png,
+STUTTGART,stuttgart.png,
+FIORENTINA,fiorentina.png,
+BESIKTAS,liso_blanco_negro.png,
+BENFICA,liso_rojo_blanco.png,
+VALENCIA,liso_blanco_negro.png,
+BARCELONA,barcelona.png,
+ATLETICO DE MADRID,atleti.png,
+NEW YORK CITY,city.png,
+EMELEC,emelec.png,
+PACHUCA,verticales_azul_blanco.png,
+TIGRES UANL,uanl.png,
 STRASBOURG
 SEVILLA
 NAGOYA GRAMPUS

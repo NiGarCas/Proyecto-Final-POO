@@ -8,13 +8,10 @@ package visualizacion;
 import datos.Cliente;
 import datos.Servidor;
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -46,7 +43,7 @@ public class PanelMenuPrincipal extends Panel{
         JButton source = (JButton)evento.getSource();
         String textoBoton = source.getText();
         switch(textoBoton){
-            case "SALIR":
+            case "GUARDAR Y SALIR":
                 this.getVentana().getJuego().getLogica().guardarDatos("datosBasicos.txt", "escritura.txt");
                 JOptionPane.showMessageDialog(this.getVentana(), "Datos guardados exitosamente");
                 this.getVentana().dispose();
@@ -85,8 +82,8 @@ public class PanelMenuPrincipal extends Panel{
     @Override
     public void agregarComponentes(Graphics g) {
        this.removeAll();
-       JButton salir = new JButton("SALIR");
-       salir.setFont(this.getFont());
+       JButton salir = new JButton("GUARDAR Y SALIR");
+       salir.setFont(this.getFont().deriveFont(0, 12));
        salir.setBounds(50, 30, 150, 35);
        salir.setLocation(50, 30);
        salir.setBackground(this.getVerdeOscuro());

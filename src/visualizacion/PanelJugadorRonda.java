@@ -20,6 +20,7 @@ import javax.swing.JLabel;
  */
 public class PanelJugadorRonda extends Panel{
     private Jugador jugador;
+    private int ronda;
     public PanelJugadorRonda(Ventana Ventana) {
         super(Ventana);
         
@@ -28,6 +29,7 @@ public class PanelJugadorRonda extends Panel{
     @Override
     public void paintComponent(Graphics g){
         this.jugador = this.getVentana().getJuego().getDosJugadores().getRonda_actual().getJugador();
+        this.ronda = this.getVentana().getJuego().getDosJugadores().getRonda_actual().getNumero();
         this.setLayout(null);
         super.paintComponent(g);
         Image fondo = loadImage("Fondo.png");
@@ -40,22 +42,6 @@ public class PanelJugadorRonda extends Panel{
         JButton source = (JButton)evento.getSource();
         String textoBoton = source.getText();
         switch(textoBoton){
-            case "PISTAS":
-                this.getVentana().actualizarPanel(4);
-                break;
-            case "ATRÁS":
-                this.getVentana().getJuego().getUnJugador().setJugador_Actual(null);
-                this.getVentana().actualizarPanel(2);
-                break;
-            case "ANTERIOR  JUGADOR":
-                this.getVentana().getJuego().getUnJugador().anteriorJugador();
-                this.repaint();
-                System.out.println(this.jugador.getNombre());
-                break;
-            case "SIGUIENTE  JUGADOR":
-                this.getVentana().getJuego().getUnJugador().siguienteJugador();
-                this.repaint();
-                break;
             case "<":
                 this.jugador.getLetrasRespuesta().remove(this.jugador.getLetrasRespuesta().size() - 1);
                 this.repaint();
@@ -80,7 +66,7 @@ public class PanelJugadorRonda extends Panel{
     @Override
     public void agregarComponentes(Graphics g) {
         this.removeAll();
-        JButton pistas = new JButton("PISTAS");
+        JButton pistas = new JButton("RONDA" + this.ronda);
         pistas.setFont(this.getFont());
         pistas.setBounds(50, 30, 200, 35);
         pistas.setLocation(50, 30);
@@ -88,12 +74,6 @@ public class PanelJugadorRonda extends Panel{
         pistas.setForeground(this.getVerdeClaro());
         pistas.addActionListener(this);
         this.add(pistas);
-        JLabel monedas = new JLabel("MONEDAS: " + this.getVentana().getJuego().getMonedas());
-        monedas.setFont(this.getFont().deriveFont(0,25));
-        monedas.setBounds(340, 15, 200, 50);
-        monedas.setLocation(340, 15);
-        monedas.setForeground(this.getDorado());
-        this.add(monedas);
         JButton atras = new JButton("ATRÁS");
         atras.setFont(this.getFont());
         atras.setBounds(564, 30, 200, 35);
@@ -102,24 +82,7 @@ public class PanelJugadorRonda extends Panel{
         atras.setForeground(this.getVerdeClaro());
         atras.addActionListener(this);
         this.add(atras);
-        JButton anterior = new JButton("ANTERIOR  JUGADOR");
-        anterior.setFont(this.getFont());
-        anterior.setBounds(50, 435, 200, 35);
-        anterior.setLocation(50, 435);
-        anterior.setBackground(this.getVerdeOscuro());
-        anterior.setForeground(this.getVerdeClaro());
-        anterior.addActionListener(this);
-        this.add(anterior);
-        JButton siguiente = new JButton("SIGUIENTE  JUGADOR");
-        siguiente.setFont(this.getFont());
-        siguiente.setBounds(564, 435, 200, 35);
-        siguiente.setLocation(564, 435);
-        siguiente.setBackground(this.getVerdeOscuro());
-        siguiente.setForeground(this.getVerdeClaro());
-        siguiente.addActionListener(this);
-        this.add(siguiente);
         this.agregarCamisetas(g);
-        System.out.println("adivinado: "+ jugador.isAdivinado());
         if(jugador.isAdivinado() && (jugador.getNombre().toCharArray().length == jugador.getLetrasRespuesta().size())){
             JLabel correcto = new JLabel("¡CORRECTO!");
             correcto.setFont(this.getFont().deriveFont(0,25));
@@ -225,7 +188,7 @@ public class PanelJugadorRonda extends Panel{
     }
 
     private void agregarCamisetas(Graphics g) {
-        this.jugador = this.getVentana().getJuego().getDosJugadores().getJugador_actual();
+        this.jugador = this.getVentana().getJuego().getDosJugadores().getRonda_actual().getJugador();
         int cantidad = this.jugador.getEquipos().size();
         switch(cantidad){
             case 1:
