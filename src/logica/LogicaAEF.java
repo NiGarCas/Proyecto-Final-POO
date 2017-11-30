@@ -93,6 +93,7 @@ public class LogicaAEF {
                                Nivel nivel = new Nivel(numero, adivinados, rpd);
                                prox = flujoEntrada.next().trim();
                                for(int i = 0; i<30;i++){
+                                   System.out.println(i);
                                     if(prox.equals("J")){}else{
                                         System.out.println("error lectura jugadores");
                                     }

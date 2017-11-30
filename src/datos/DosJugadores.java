@@ -135,7 +135,7 @@ public class DosJugadores {
                 this.lectura = new BufferedReader(new InputStreamReader(entrada));
                 this.escritura = new PrintWriter(salida,true);
                 escritura.println(this.cliente.getNombre());
-                this.rondas[0].setJugador(0, 6);
+                this.rondas[0].setJugador(0, 27);
                 this.rondas[1].setJugador(4, 3);
                 this.rondas[2].setJugador(3, 21);
                 this.rondas[3].setJugador(2, 1);
@@ -149,7 +149,7 @@ public class DosJugadores {
                 this.hayRival = true;
                 this.lectura = new BufferedReader(new InputStreamReader(entrada));
                 this.escritura = new PrintWriter(salida,true);
-                this.rondas[0].setJugador(0, 6);
+                this.rondas[0].setJugador(0, 27);
                 this.rondas[1].setJugador(4, 3);
                 this.rondas[2].setJugador(3, 21);
                 this.rondas[3].setJugador(2, 1);

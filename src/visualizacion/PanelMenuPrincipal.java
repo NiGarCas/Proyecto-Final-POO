@@ -44,7 +44,7 @@ public class PanelMenuPrincipal extends Panel{
         String textoBoton = source.getText();
         switch(textoBoton){
             case "GUARDAR Y SALIR":
-                this.getVentana().getJuego().getLogica().guardarDatos("datosBasicos.txt", "escritura.txt");
+                this.getVentana().getJuego().getLogica().guardarDatos("datosBasicos.txt", "pruebaJug.txt");
                 JOptionPane.showMessageDialog(this.getVentana(), "Datos guardados exitosamente");
                 this.getVentana().dispose();
                 break;

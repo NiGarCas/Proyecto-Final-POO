@@ -58,7 +58,7 @@ public class PanelNivel extends Panel{
     @Override
     public void agregarComponentes(Graphics g) {
         this.removeAll();
-        JLabel niveles = new JLabel("NIVELES");
+        JLabel niveles = new JLabel("NIVEL");
         niveles.setFont(this.getFont().deriveFont(0, 110));
         niveles.setBounds(40, 15, 500, 110);
         niveles.setLocation(40, 15);
